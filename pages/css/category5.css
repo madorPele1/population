@@ -2,7 +2,7 @@ body{
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background-image: url('assets/images/coping/PurpleBackground.png');
+    background-image: url('../../assets/images/coping/PurpleBackground.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -559,7 +559,7 @@ li{
         width: 100vw;
         height: 100vh;
         margin: 0;
-        background-image: url('assets/images/coping/PurpleBackgroundPhone.png');
+        background-image: url('../../assets/images/coping/PurpleBackgroundPhone.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;
@@ -919,4 +919,5 @@ li{
 }
 
 }
+
 

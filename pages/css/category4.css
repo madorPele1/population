@@ -2,7 +2,7 @@ body{
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background-image: url('assets/images/help/GreenBackground.png');
+    background-image: url('../../assets/images/help/GreenBackground.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -14,7 +14,7 @@ body{
 
 @font-face {
     font-family:Assistant;
-    src: url(assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
+    src: url(../../assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
 }
 
 #chooseCategory{
@@ -795,7 +795,7 @@ body{
         width: 100vw;
         height: 100vh;
         margin: 0;
-        background-image: url('assets/images/help/GreenBackgroundPhone.png');
+        background-image: url('../../assets/images/help/GreenBackgroundPhone.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;
@@ -1246,4 +1246,5 @@ body{
 
 
 }
+
 

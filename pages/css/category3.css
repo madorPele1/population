@@ -2,7 +2,7 @@ body{
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background-image: url('/assets/images/warningDevices/BlueBackground.png');
+    background-image: url('assets/images/warningDevices/BlueBackground.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -548,5 +548,6 @@ body{
      width:14vw;
      right:3vw;
 }
+
 
 }

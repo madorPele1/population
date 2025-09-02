@@ -30,6 +30,7 @@ body{
     height: 12vh;
     top: 83vh;
     right: 88vw;
+   z-index: 300;
 }
 
 
@@ -43,6 +44,32 @@ body{
     top: 3.5vh;
     right: 85vw;
 }
+
+
+#category1-page {
+    display: none;
+}
+
+#category2-page {
+    display: none;
+}
+
+#category3-page {
+    display: none;
+}
+
+#category4-page {
+    display: none;
+}
+
+#category5-page {
+    display: none;
+}
+
+#main-page1{
+    display: block;
+}
+
 .icons{
     position: absolute;
     display: flex;
@@ -51,6 +78,7 @@ body{
     top: 5vh;
     padding-right: 1vh;
     right: 85vw;
+  z-index: 300;
 }
 
 .icon{
@@ -118,7 +146,415 @@ body{
     left: 37vw;
 }
 
-@media screen and (max-width: 800px){
+.button{
+    font-weight: 700;
+    color: white;
+    background-color: #052554;
+    box-shadow: 3px 3px #8c8c8c;
+    cursor: pointer;
+    transition: all .5s;
+    left: 0;
+}
+
+.button:hover{
+     background-color: #b5b5b5;
+      box-shadow: 0px 0px #8c8c8c;
+}
+
+.backbutton{
+    position: absolute;
+    width: 7vw;
+    height: 8vh;
+    border-radius: 40px;
+    text-align: center;
+    padding: 1vh;
+    padding-top: 1.5vh;
+    font-size: 2.4vmax;
+    top: 83vh;
+    right: 5vw;
+}
+
+
+.chap1-info {
+    width: 60vw;
+    position: absolute;
+    right: 20vw;
+    border-radius: 2vw;
+    font-size: 1.8vmax;
+    top: 35%;
+    overflow-y: hidden;
+    height: 60vh;
+}
+
+.call-title {
+    height: 3.5vh;
+    color: #2f3043;
+    padding-right: 1vw;
+}
+
+.spec-call {
+    padding-top: 5vh;
+    padding-bottom: 0vh;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: solid 2px #c3c9d0;
+    border-radius: 2vh;
+    transition: all .5s;
+    background-color: #ffffff;
+}
+
+.name-info {
+    padding-bottom: 3vh;
+    position: relative;
+    bottom: 3vh;
+    padding-right: 2vw;
+     padding-bottom: 1vw;
+    font-size: 1.8vmax;
+    font-family: Assistant;
+    font-weight: 700;
+    color: #052554;
+    
+}
+
+.spec-call:hover {
+    background-color:#ffe4b7ff;
+    cursor: pointer;
+}
+
+.title-chap1-info {
+    color: #396c84;
+    font-family: "aharoni";
+    font-weight: bold;
+    font-size: 1.4vmax;
+    position: relative;
+}
+
+.info-div {
+    /* white-space: nowrap;  */
+    overflow: hidden;
+    text-overflow: clip;
+    margin-top: 1vh;
+    border-top: solid 0px #ffffff;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    overflow-wrap: break-word;
+}
+
+.info-div p {
+    position: relative;
+    right: 2%;
+    bottom: 10%;
+}
+
+.info-text2 {
+    position: relative;
+    margin: 0;
+    transform: translateY(-1vh);
+    font-size: 1.6vmax;
+}
+
+.info-text1 {
+    margin-top: 1vh;
+    font-size: 1.8vmax;
+    width: 90%;
+    margin-right: 1vw;
+    font-weight: 450;
+    color: #052554;
+}
+
+.info-div {
+    height: 0;
+    transition: all .4s;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+
+.first-call {
+    border-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    margin: 0.5vw;
+} 
+
+.down-arrow {
+    position: absolute;
+    width: 2vw;
+    margin-top: -1.5vh;
+    left: 2vw;
+    transition: all .4s;
+}
+
+.long-info {
+    overflow-y: scroll;
+    direction: ltr;
+    top: 10%;
+}
+
+.long-info p {
+    direction: rtl;
+    left: 5%;
+}
+
+.explenation-text{
+    position: absolute;
+    font-size: 2.1vmax;
+    width:70vw;
+    color: #052554;
+    text-align: center;
+    right: 15vw;
+    top: 18vh;
+}
+
+.small-explenation-text{
+    position: absolute;
+    font-size: 1.7vmax;
+    width:70vw;
+    color: #052554;
+    text-align: center;
+    right: 15vw;
+    top: 18vh;
+}
+
+
+#chap5-info{
+    top: 40vh;
+    overflow-y: scroll;
+}
+
+#emphasisCoping-continer{
+    position: absolute;
+    width: 80vw;
+    height: 50vh;
+    display: flex;
+    flex-flow: row wrap;
+    right: 18vw;
+    top: 39vh;
+  
+}
+
+.emphasisCoping{
+    position: relative;
+    margin-right: 1.3vw;
+    margin-bottom:2vh;
+    width: 30vw;
+    height: 7vh;
+    background-color: #176598;
+    border-radius: 1vw;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.6vmax;
+    padding-top: 2vh;
+    cursor: pointer;
+    box-shadow: 4px 4px #8c8c8c;
+    transition: all .5s;
+    left: 0;
+}
+
+.emphasisCoping:hover{
+    left: 4px;
+    box-shadow: 0px 0px #8c8c8c;
+}
+
+#phoneNumbers{
+    position: absolute;
+    width: 45vw;
+    padding: 3vw;
+    background-color: #ffffff;
+    font-size: 1.7vmax;
+    border-radius: 2vw;
+    color: #052554;
+    top: 36vh;
+    right: 4vw;
+    box-shadow: 4px 4px #dbdbdb;
+    padding-bottom:2.5vw;
+}
+
+#phoneNumbersExplenations{
+    position: absolute;
+    width: 38vw;
+    padding: 1vw;
+    background-color: #ffffff;
+    font-size: 1.6vmax;
+    border-radius: 2vw;
+    color: #052554;
+    font-weight: 600;
+    top: 36vh;
+    right: 56vw;
+    box-shadow: 4px 4px #dbdbdb;
+}
+
+#fullList{
+    position: relative;
+    top: 2vh;
+    right: 23vw;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#fullList:hover{
+    color: gray;
+}
+
+li{
+    margin: 0.5vw;
+}
+
+.beckgroundExplenation{
+    position: absolute;
+    width:100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.212);
+    z-index: 899;
+}
+
+.close-button{
+    font-weight: 700;
+    color: white;
+    background-color: #052554;
+    cursor: pointer;
+    transition: all .5s;
+    left: 0;
+    width: 6vw;
+    border-radius: 3vw;
+    z-index:2000;
+    text-align: center;
+    font-size: 2vmax;
+    height: 5vh;
+    position: absolute;
+    right: 49vw;
+    height: 7vh;
+    top: 80vh;
+}
+
+.close-button:hover{
+    background-color: #b5b5b5;
+}
+
+#fullPhoneList{
+    display: none;
+}
+
+#phoneListCoping{
+    position: absolute;
+    width: 75vw;
+    height: 85vh;
+    top:7vh;
+    right: 12.5vw;
+    background-color: #ffffff;
+    border-radius: 0.5vw;
+    box-shadow: 5px 5px rgb(207, 207, 207);
+    z-index: 999;
+    color: #052554;
+    font-size: 2.4vmax;
+}
+
+#phoneListCoping-text{
+    display: block;
+    position: absolute;
+    width: 75vw;
+    height: 85vh;
+    right: 4vw;
+    top: 8vh;
+}
+
+#phoneListCoping-text-phone{
+    display: none;
+}
+
+.makePhoneList{
+    position: relative;
+    margin-right: 1.3vw;
+    margin-bottom:2vh;
+    width: 30vw;
+    height: 7vh;
+    background-color: #176598;
+    border-radius: 1vw;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2vmax;
+    padding-top: 1vh;
+    cursor: pointer;
+    box-shadow: 4px 4px rgb(207, 207, 207);
+    transition: all .5s;
+    left: 0;
+    top: 84vh;
+    right: 35vw;
+}
+
+.makePhoneList:hover{
+   box-shadow: 0px 0px rgb(207, 207, 207);
+    left: 4px;
+    background-color: #b5b5b5;
+}
+
+#importancePhoneList{
+    position: absolute;
+    display: none;
+}
+
+#importancePhoneList-div{
+  position: absolute;
+    width: 75vw;
+    height: 85vh;
+    top:7vh;
+    right: 12.5vw;
+    background-color: #ffffff;
+    border-radius: 0.5vw;
+    box-shadow: 5px 5px rgb(207, 207, 207);
+    z-index: 999;
+    color: #052554;
+    font-size: 2vmax;
+}
+
+#importancePhoneList-text{
+    position: absolute;
+    width: 68vw;
+    height: 85vh;
+    right: 3vw;
+    top:7vh;
+}
+
+#emphasisExplenations{
+     position: absolute;
+    width: 75vw;
+    height: 85vh;
+    top:7vh;
+    right: 12.5vw;
+    background-color: #ffffff;
+    border-radius: 0.5vw;
+    box-shadow: 5px 5px rgb(207, 207, 207);
+    z-index: 999;
+    color: #052554;
+    font-size: 2vmax;
+}
+
+#emphasisExplenations-container{
+    display: none;
+}
+
+#emphasis-title{
+    position: absolute;
+     color: #052554;
+    font-size: 3vmax;
+    font-weight: 700;
+    top: 5vh;
+    width: 70vw;
+     right: 2.5vw;
+     text-align: center;
+}
+
+#emphasis-text{
+    width: 70vw;
+    position: absolute;
+    color: #052554;
+    font-size: 2vmax;
+    top: 15vh;
+    right: 2.5vw;
+}
+@media screen and (max-width: 450px){
     body{
         width: 100vw;
         height: 100vh;
@@ -150,6 +586,9 @@ body{
         cursor: pointer;
     }
 
+    #homeIcon:hover{
+    cursor: pointer;
+    }
 
     #soliderSpeech{
         position: absolute;
@@ -223,23 +662,259 @@ body{
     }
 
     .categoryTitle{
-    width: 95vw;
+        width: 95vw;
+        position: absolute;
+        font-weight: 900;
+        color: #052554;
+        font-size: 3.5vmax;
+        text-align: center;
+        top: 10vh;
+    }
+
+    .titleIcon{
+        position: relative;
+        width: 8vw;
+        height:8vh;
+        top: 2.5vh;
+        right: -1vw;
+    }
+
+ .backbutton{
+        position: absolute;
+        width: 16vw;
+        height: 4vh;
+        border-radius: 40px;
+        text-align: center;
+        padding: 1vh;
+        font-size: 3vmax;
+        top: 90vh;
+        right: 5vw;
+    }
+
+    
+    .close-button{
+        font-weight: 700;
+        color: white;
+        background-color: #052554;
+        cursor: pointer;
+        transition: all .5s;
+        left: 0;
+        width: 17vw;
+        border-radius: 6vw;
+        z-index:2000;
+        text-align: center;
+        font-size: 2.7vmax;
+        height: 4.5vh;
+        position: absolute;
+        right: 42VW;
+        top: 75vh;
+    }
+
+    #phoneNumbers{
     position: absolute;
-    font-weight: 900;
+    width: 90vw;
+    padding: 3vw;
+    background-color: #ffffff;
+    font-size: 1.6vmax;
+    border-radius: 2vw;
     color: #052554;
-    font-size: 3.5vmax;
-    text-align: center;
+    top: 36vh;
+    right: 2.5vw;
+    box-shadow: 4px 4px #dbdbdb;
+    padding-bottom:2.5vw;
+    height: 15vh;
+}
+
+#phoneNumbersExplenations{
+    position: absolute;
+    width: 93vw;
+    padding: 1vw;
+    background-color: #ffffff;
+    font-size: 1.6vmax;
+    border-radius: 2vw;
+    color: #052554;
+    font-weight: 600;
+    top: 57vh;
+    right: 2.5vw;
+    box-shadow: 4px 4px #dbdbdb;
+}
+
+#phoneListCoping{
+    position: absolute;
+    width: 90vw;
+    height: 75vh;
+    top:7vh;
+    right: 5vw;
+    background-color: #ffffff;
+    border-radius: 0.5vw;
+    box-shadow: 5px 5px rgb(207, 207, 207);
+    z-index: 999;
+    color: #052554;
+    font-size: 2.2vmax;
+}
+
+#phoneListCoping-text{
+    display: none;
+}
+
+#phoneListCoping-text-phone{
+    display: block;
+    position: absolute;
+    width: 90vw;
+    height: 85vh;
+    right: 2vw;
     top: 8vh;
 }
-
-.titleIcon{
-    position: relative;
-    width: 8vw;
-    height:8vh;
-    top: 2.5vh;
-    right: -1vw;
+.small-explenation-text{
+    position: absolute;
+    font-size: 1.8vmax;
+    width:85vw;
+    color: #052554;
+    text-align: center;
+    right: 7.5vw;
+    top: 20vh;
 }
 
+.explenation-text{
+    position: absolute;
+    font-size: 2.4vmax;
+    width:85vw;
+    color: #052554;
+    text-align: center;
+    right: 7.5vw;
+    top: 20vh;
+}
 
+.makePhoneList{
+    position: relative;
+    margin-right: 1.3vw;
+    margin-bottom:2vh;
+    width: 70vw;
+    height: 4vh;
+    background-color: #176598;
+    border-radius: 1vw;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2.2vmax;
+    padding-top: 1vh;
+    cursor: pointer;
+    box-shadow: 4px 4px rgb(207, 207, 207);
+    transition: all .5s;
+    left: 0;
+    top: 78vh;
+    right: 15vw;
+}
 
+#importancePhoneList-div{
+    height: 77vh;
+}
+
+#importancePhoneList-text{
+    position: absolute;
+    width: 68vw;
+    height: 85vh;
+    right: 3vw;
+    top:3vh;
+    font-size: 2.2vmax;
+}
+
+ .chap1-info {
+        width: 90vw;
+        right: 5vw;
+        height: 48vh;
+        top: 36.5vh;
+    }
+
+    .call-title {
+    height: 2.5vh;
+    padding-right: 2vw;
+    }
+
+    .first-call {
+    border-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+    margin:2vw;
+    } 
+
+    .name-info {
+        padding-bottom: 3vh;
+        position: relative;
+        bottom: 3vh;
+        padding-right: 2vw;
+        padding-bottom: 1vw;
+        font-size: 2.5vmax;
+        font-family: Assistant;
+        font-weight: 700;
+        
+    }
+
+    
+    .info-text1 {
+        margin-top: 1vh;
+        font-size: 2.5vmax;
+        width: 90%;
+        margin-right: 1vw;
+        font-weight: 450;
+    }
+        
+    .down-arrow {
+        position: absolute;
+        width: 3.5vw;
+        margin-top: -1.8vh;
+        left: 7vw;
+        transition: all .4s;
+    }
+
+    
+    #chap5-info{
+        top: 36vh;
+        overflow-y: scroll;
+    }
+
+    
+    #emphasisCoping-continer{
+        position: absolute;
+        width: 95vw;
+        height: 40vh;
+        display: flex;
+        flex-flow: row wrap;
+        right: 2.5vw;
+        top: 39vh;
+    
+    }
+
+    .emphasisCoping{
+    position: relative;
+    margin-right: 2vw;
+    margin-bottom:2vh;
+    width: 40vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    height:3vh;
+    font-weight: 700;
+    font-size: 1.9vmax;
+    padding-top: 1.5vh;
+    padding-bottom: 2.5vh;
+   
+}
+
+#emphasisExplenations{
+     position: absolute;
+    width: 75vw;
+    height: 76vh;
+}
+
+#emphasis-title{
+    font-size: 3.5vmax;
+    top: 5vh;
+    width: 70vw;
+}
+
+#emphasis-text{
+    width: 70vw;
+    font-size: 2.1vmax;
+    top: 17vh;
+}
 }

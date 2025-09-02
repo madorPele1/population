@@ -23,6 +23,11 @@ body{
     height: 12vh;
     top: 83vh;
     right: 88vw;
+   z-index: 300;
+}
+
+#homeIcon:hover{
+  cursor: pointer;
 }
 
 #pkarIcon{
@@ -50,6 +55,7 @@ body{
     top: 5vh;
     padding-right: 1vh;
     right: 85vw;
+    z-index: 300;
 }
 
 .icon{
@@ -100,13 +106,14 @@ body{
 }
 
 .categoryTitle{
-    width: 95vw;
+    width: 90vw;
     position: absolute;
     font-weight: 900;
     color: #052554;
     font-size: 4vmax;
     text-align: center;
     top: 5vh;
+    right: 2vw;
 }
 
 .titleIcon{
@@ -126,7 +133,208 @@ body{
     left: 37vw;
 }
 
-@media screen and (max-width: 800px){
+#category1-page {
+    display: none;
+}
+
+#category2-page {
+    display: none;
+}
+
+#category3-page {
+    display: none;
+}
+
+#category4-page {
+    display: none;
+}
+
+#category5-page {
+    display: none;
+}
+
+#category6-page {
+    display: none;
+}
+
+#category7-page {
+    display: none;
+}
+
+#back-button {
+    display: none;
+}
+
+.button{
+    font-weight: 700;
+    color: white;
+    background-color: #052554;
+    box-shadow: 3px 3px #8c8c8c;
+    cursor: pointer;
+    transition: all .5s;
+    left: 0;
+}
+
+.button:hover{
+     background-color: #b5b5b5;
+      box-shadow: 0px 0px #8c8c8c;
+}
+
+.backbutton{
+    position: absolute;
+    width: 7vw;
+    height: 8vh;
+    border-radius: 40px;
+    text-align: center;
+    padding: 1vh;
+    padding-top: 1.5vh;
+    font-size: 2.4vmax;
+    top: 83vh;
+    right: 5vw;
+    z-index: 300;
+}
+
+
+.chap1-info {
+    width: 60vw;
+    position: absolute;
+    right: 20vw;
+    border-radius: 2vw;
+    font-size: 1.8vmax;
+    top: 35%;
+    overflow-y: hidden;
+    height: 60vh;
+}
+
+.call-title {
+    height: 3.5vh;
+    color: #2f3043;
+    padding-right: 2vw;
+}
+
+.spec-call {
+    padding-top: 5vh;
+    padding-bottom: 0vh;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: solid 2px #c3c9d0;
+    border-radius: 2vh;
+    transition: all .5s;
+    background-color: #ffffff;
+}
+
+.name-info {
+    padding-bottom: 3vh;
+    position: relative;
+    bottom: 3vh;
+    padding-right: 2vw;
+     padding-bottom: 1vw;
+    font-size: 2vmax;
+    font-family: Assistant;
+    font-weight: 700;
+    color: #052554;
+    
+}
+
+.spec-call:hover {
+    background-color:#ffe4b7ff;
+    cursor: pointer;
+}
+
+.title-chap1-info {
+    color: #396c84;
+    font-family: "aharoni";
+    font-weight: bold;
+    font-size: 1.4vmax;
+    position: relative;
+}
+
+.info-div {
+    /* white-space: nowrap;  */
+    overflow: hidden;
+    text-overflow: clip;
+    margin-top: 1vh;
+    border-top: solid 0px #ffffff;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    overflow-wrap: break-word;
+}
+
+.info-div p {
+    position: relative;
+    right: 2%;
+    bottom: 10%;
+}
+
+.info-text2 {
+    position: relative;
+    margin: 0;
+    transform: translateY(-1vh);
+    font-size: 1.6vmax;
+}
+
+.info-text1 {
+    margin-top: 1vh;
+    font-size: 1.8vmax;
+    width: 90%;
+    margin-right: 1vw;
+    font-weight: 450;
+    color: #052554;
+}
+
+.info-div {
+    height: 0;
+    transition: all .4s;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+
+.first-call {
+    border-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    margin: 0.5vw;
+} 
+
+.down-arrow {
+    position: absolute;
+    width: 2vw;
+    margin-top: -1.5vh;
+    left: 2vw;
+    transition: all .4s;
+}
+
+.long-info {
+    overflow-y: scroll;
+    direction: ltr;
+    top: 10%;
+}
+
+.long-info p {
+    direction: rtl;
+    left: 5%;
+}
+
+#info-text1{
+    margin-top: 8vh;
+}
+
+#info-text6{
+    margin-top: 8vh;
+}
+
+.explenation-text{
+    position: absolute;
+    font-size: 2.1vmax;
+    width: 56vw;
+    color: #052554;
+    text-align: center;
+    right: 22vw;
+    top: 18vh;
+}
+
+@media screen and (max-width: 450px){
     body{
         width: 100vw;
         height: 100vh;
@@ -139,6 +347,76 @@ body{
         overflow-y: hidden;
         direction: rtl;
         font-family: Assistant;
+    }
+
+    .explenation-text{
+    position: absolute;
+    font-size: 2.4vmax;
+    width: 80vw;
+    color: #052554;
+    text-align: center;
+    right: 10vw;
+    top: 25vh;
+    }   
+
+    .chap1-info {
+        width: 90vw;
+        right: 5vw;
+        height: 50vh;
+        top: 36.5vh;
+    }
+
+    .call-title {
+    height: 2.5vh;
+    padding-right: 2vw;
+    }
+
+    .first-call {
+    border-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+    margin:2vw;
+    } 
+
+    .name-info {
+        padding-bottom: 3vh;
+        position: relative;
+        bottom: 3vh;
+        padding-right: 2vw;
+        padding-bottom: 1vw;
+        font-size: 2.5vmax;
+        font-family: Assistant;
+        font-weight: 700;
+        
+    }
+
+    
+    .info-text1 {
+        margin-top: 1vh;
+        font-size: 2.5vmax;
+        width: 90%;
+        margin-right: 1vw;
+        font-weight: 450;
+    }
+        
+    .down-arrow {
+        position: absolute;
+        width: 3.5vw;
+        margin-top: -1.8vh;
+        left: 7vw;
+        transition: all .4s;
+    }
+
+    .backbutton{
+        position: absolute;
+        width: 16vw;
+        height: 4vh;
+        border-radius: 40px;
+        text-align: center;
+        padding: 1vh;
+        font-size: 3vmax;
+        top: 90vh;
+        right: 5vw;
     }
 
     #homeIcon{
@@ -204,7 +482,7 @@ body{
     flex-wrap: wrap;
     width: 90vw; 
     right: 5vw;
-    top: 18vh;
+    top: 22vh;
 }
 
 .category{
@@ -226,16 +504,17 @@ body{
         height:52vh;
         top: 54vh;
         left: 58vw;
+        z-index: 300;
     }
 
 .categoryTitle{
-    width: 95vw;
-    position: absolute;
-    font-weight: 900;
-    color: #052554;
-    font-size: 3.5vmax;
-    text-align: center;
-    top: 8vh;
+     width: 95vw;
+        position: absolute;
+        font-weight: 900;
+        color: #052554;
+        font-size: 3.5vmax;
+        text-align: center;
+        top: 11vh;
 }
 
 .titleIcon{
@@ -248,3 +527,5 @@ body{
 
 
 }
+
+

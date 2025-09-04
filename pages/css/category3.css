@@ -345,6 +345,7 @@ body{
         font-family: Assistant;
     }
 
+    
     .backbutton{
         position: absolute;
         width: 16vw;
@@ -353,9 +354,19 @@ body{
         text-align: center;
         padding: 1vh;
         font-size: 3vmax;
-        top: 90vh;
+        top: 81vh;
         right: 5vw;
     }
+
+    #homeIcon{
+        position: absolute;
+        width: 14vw;
+        height: 14vh;
+        top: 77vh;
+        right: 80vw;
+        cursor: pointer;
+    }
+
 
     #pkarIcon{
         position: absolute;
@@ -364,15 +375,6 @@ body{
         top: 1vh;
         right: 24vw;
     }
-
-    #homeIcon{
-        position: absolute;
-        width: 14vw;
-        height: 14vh;
-        top: 86vh;
-        right: 80vw;
-    }
-
 
     #soliderSpeech{
         position: absolute;
@@ -551,4 +553,5 @@ body{
 
 
 }
+
 

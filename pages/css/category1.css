@@ -407,6 +407,7 @@ body{
         transition: all .4s;
     }
 
+ 
     .backbutton{
         position: absolute;
         width: 16vw;
@@ -415,7 +416,7 @@ body{
         text-align: center;
         padding: 1vh;
         font-size: 3vmax;
-        top: 90vh;
+        top: 81vh;
         right: 5vw;
     }
 
@@ -423,10 +424,11 @@ body{
         position: absolute;
         width: 14vw;
         height: 14vh;
-        top: 86vh;
+        top: 77vh;
         right: 80vw;
         cursor: pointer;
     }
+
 
     #pkarIcon{
         position: absolute;
@@ -527,6 +529,7 @@ body{
 
 
 }
+
 
 
 

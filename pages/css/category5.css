@@ -577,14 +577,28 @@ li{
         right: 24vw;
     }
 
+    
+    .backbutton{
+        position: absolute;
+        width: 16vw;
+        height: 4vh;
+        border-radius: 40px;
+        text-align: center;
+        padding: 1vh;
+        font-size: 3vmax;
+        top: 81vh;
+        right: 5vw;
+    }
+
     #homeIcon{
         position: absolute;
         width: 14vw;
         height: 14vh;
-        top: 86vh;
+        top: 77vh;
         right: 80vw;
         cursor: pointer;
     }
+
 
     #homeIcon:hover{
     cursor: pointer;
@@ -679,19 +693,6 @@ li{
         right: -1vw;
     }
 
- .backbutton{
-        position: absolute;
-        width: 16vw;
-        height: 4vh;
-        border-radius: 40px;
-        text-align: center;
-        padding: 1vh;
-        font-size: 3vmax;
-        top: 90vh;
-        right: 5vw;
-    }
-
-    
     .close-button{
         font-weight: 700;
         color: white;
@@ -919,6 +920,7 @@ li{
 }
 
 }
+
 
 
 

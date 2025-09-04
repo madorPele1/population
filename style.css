@@ -387,10 +387,9 @@ body{
     text-align: center;
     padding: 1vh;
     font-size: 3vmax;
-    top: 90vh;
+    top: 83vh;
     right: 63vw;
 }
-
 #soliderHome{
     position: absolute;
     width:53vw;
@@ -445,5 +444,6 @@ body{
         top: 54vh;
         left: 58vw;
     }
+
 
 }

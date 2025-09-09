@@ -16,6 +16,7 @@ body{
     font-family:Assistant;
     src: url(../../assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
 }
+
 #chooseCategory{
     display: block;
 }
@@ -402,12 +403,12 @@ body{
 
 #white-div-text1-agriculture{
     position: relative;
-    font-size: 3.6vmin;
+    font-size: 3.2vmin;
     font-weight: 400;
     width: 55vw;
     text-align: center;
-    right:9vw;
-    top: -15vh;
+    right:7vw;
+    top: -7vh;
     color: #052554;
 }
 
@@ -418,8 +419,14 @@ body{
     width: 55vw;
     text-align: center;
     right:9vw;
-    top: -5vh;
+    top: -10vh;
     color: #052554;
+}
+
+#movePages-help{
+    top: 45vh;
+    width: 65vw;
+    right: 1vw;
 }
 
 #back-arrow{
@@ -538,14 +545,14 @@ body{
 #white-div-agriculture{
     width: 65vw;
     height: 28vh;
-    top: 40vh;
+    top: 35vh;
     right: 16VW;
 }
 
 #white-div-help{
     width: 65vw;
     height: 28vh;
-    top: 40vh;
+    top: 27vh;
     right: 16VW;
 }
 
@@ -554,7 +561,8 @@ body{
 }
 
 #movePages-agriculture{
-    top: 18vh;
+    top: 35vh;
+    width: 60vw;
 }
 
 
@@ -594,7 +602,7 @@ body{
     font-size: 1.5vmax;
     color: #052554;
     font-weight: 500;
-    top: 6vh;
+    top: 8vh;
 }
 
 
@@ -1054,6 +1062,17 @@ body{
         top: -1vh;
         color: #052554;
     }
+    
+      #white-div-text1-help{
+        position: relative;
+        font-size: 3.9vmin;
+        font-weight: 400;
+        width: 65vw;
+        text-align: center;
+        right:2vw;
+        top: -1vh;
+        color: #052554;
+    }
 
     .titleIcon{
         position: relative;
@@ -1093,7 +1112,7 @@ body{
 
 #text2{
     right:4vw;
-    font-size: 2.3vmax;
+    font-size: 2.2vmax;
 }
 
 
@@ -1326,5 +1345,22 @@ body{
     top: 39vh;
 }
 
+#chap4-info{
+    top: 25vh;
+}
 
+.info-text-cellPhone{
+    font-size: 2.4vmax;
+}
+
+#white-div-help{
+    width: 65vw;
+    height: 28vh;
+    top: 27vh;
+    right: 16VW;
+}
+
+#movePages-help{
+    top: 43vh;
+}
 }

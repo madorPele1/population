@@ -426,7 +426,7 @@ body{
     width: 70vw;
     position: absolute;
     color: #052554;
-    font-size: 2vmax;
+    font-size: 2.1vmax;
     top: 20vh;
     right: 2.5vw;
 }
@@ -605,7 +605,7 @@ body{
         width: 100vw;
         height: 100vh;
         margin: 0;
-        background-image: url('../../assets/images/protectedSpace/PinkBackgroundPhone.png');
+        background-image: url('/assets/images/protectedSpace/PinkBackgroundPhone.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;
@@ -615,7 +615,28 @@ body{
         font-family: Assistant;
     }
 
-  
+   
+    .backbutton{
+        position: absolute;
+        width: 16vw;
+        height: 4vh;
+        border-radius: 40px;
+        text-align: center;
+        padding: 1vh;
+        font-size: 3vmax;
+        top: 81vh;
+        right: 5vw;
+    }
+
+    #homeIcon{
+        position: absolute;
+        width: 14vw;
+        height: 14vh;
+        top: 77vh;
+        right: 80vw;
+        cursor: pointer;
+    }
+
     #pkarIcon{
         position: absolute;
         width: 12vw;
@@ -715,29 +736,7 @@ body{
         right: -1vw;
     }
 
-   
-    .backbutton{
-        position: absolute;
-        width: 16vw;
-        height: 4vh;
-        border-radius: 40px;
-        text-align: center;
-        padding: 1vh;
-        font-size: 3vmax;
-        top: 81vh;
-        right: 5vw;
-    }
-
-    #homeIcon{
-        position: absolute;
-        width: 14vw;
-        height: 14vh;
-        top: 77vh;
-        right: 80vw;
-        cursor: pointer;
-    }
-
-
+  
     #bubbleSpeech{
         display: none;
     }
@@ -836,7 +835,7 @@ body{
     .chap1-info {
         width: 90vw;
         right: 5vw;
-        height: 60vh;
+        height: 55vh;
         top: 23vh;
     }
 
@@ -890,7 +889,7 @@ body{
 
     #chap5-info{
         top: 45vh;
-        height: 40vh;
+        height: 35vh;
     }
 
     #mustProtected-title{
@@ -900,9 +899,10 @@ body{
     }
 
     #mustProtected-text{
-        width: 70vw;
-        font-size: 2.1vmax;
-        top: 17vh;
+        width: 66vw;
+        font-size: 2.2vmax;
+        top: 14vh;
+        right: 4vw;
     }
 
       .close-button{
@@ -971,7 +971,7 @@ body{
         margin-bottom: 4vh;
     }
 
-   
+    
     #white-div-text1-important{
         position: relative;
         font-size: 4.7vmin;
@@ -982,7 +982,6 @@ body{
         top: -11vh;
         color: #052554;
     }
-
 
     .move-pages-white-div-important {
         width: 80%;
@@ -1002,10 +1001,4 @@ body{
      #back-arrow-important{
        width: 7vw; 
     }
-
 }
-
-
-
-
-

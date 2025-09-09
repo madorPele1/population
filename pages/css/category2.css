@@ -894,8 +894,8 @@ body{
     }
 
     #mustProtected-title{
-    font-size: 3.5vmax;
-    top: 5vh;
+    font-size: 4.3vmax;
+    top: 6vh;
     width: 70vw;
     }
 
@@ -971,17 +971,18 @@ body{
         margin-bottom: 4vh;
     }
 
-    
+   
     #white-div-text1-important{
         position: relative;
-        font-size: 4.3vmin;
+        font-size: 4.7vmin;
         font-weight: 400;
         width: 55vw;
         text-align: center;
         right:6vw;
-        top: -7vh;
+        top: -11vh;
         color: #052554;
     }
+
 
     .move-pages-white-div-important {
         width: 80%;
@@ -1003,6 +1004,7 @@ body{
     }
 
 }
+
 
 
 

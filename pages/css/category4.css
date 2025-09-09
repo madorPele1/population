@@ -16,7 +16,6 @@ body{
     font-family:Assistant;
     src: url(../../assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
 }
-
 #chooseCategory{
     display: block;
 }
@@ -789,13 +788,52 @@ body{
     font-weight:400;
 }
 
+#white-div-distress{
+    width: 70vw;
+    height:43vh;
+}
+
+#movePages-distress{
+    top: 30vh;
+}
+
+
+.distress-info-div {
+    position: relative;
+    width: 90%;
+    height: 67%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.distress-info-icon {
+    width: 30%;
+    max-height: 80%;
+    /* margin-left: 4vw; */
+}
+
+.distress-info-div p {
+    position: relative;
+    text-align: center;
+    width: 55%;
+    font-size: 1.5vmax;
+    left: 5%;
+    bottom: 2%;
+
+}
+
+#back-arrow-distress {
+    opacity: 0;
+}
 
 @media screen and (max-width: 450px){
     body{
         width: 100vw;
         height: 100vh;
         margin: 0;
-        background-image: url('../../assets/images/help/GreenBackgroundPhone.png');
+        background-image: url('/assets/images/help/GreenBackgroundPhone.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;
@@ -812,6 +850,8 @@ body{
         top: 1vh;
         right: 24vw;
     }
+
+
 
     #soliderSpeech{
         position: absolute;
@@ -891,7 +931,7 @@ body{
         color: #052554;
         font-size: 3.5vmax;
         text-align: center;
-        top: 11vh;
+        top: 8vh;
     }
 
     .biggerTitle{
@@ -899,7 +939,7 @@ body{
         top: 12vh;
     }
 
-
+ 
     .backbutton{
         position: absolute;
         width: 16vw;
@@ -920,8 +960,6 @@ body{
         right: 80vw;
         cursor: pointer;
     }
-
-
 
     #circle-container1{
     display: flex;
@@ -1010,10 +1048,10 @@ body{
         position: relative;
         font-size: 4vmin;
         font-weight: 400;
-        width: 60vw;
+        width: 65vw;
         text-align: center;
-        right:11vw;
-        top: -5vh;
+        right:2vw;
+        top: -1vh;
         color: #052554;
     }
 
@@ -1067,20 +1105,37 @@ body{
 
 #explenation-text-neighbors1{
     font-size: 2.4vmax;
-    top: 23vh;
+    top: 20vh;
+}
+
+#explenation-text-neighbors3{
+    font-size: 2.1vmax;
+    top: 20vh;
+    width: 90vw;
+    right: 5vw;
 }
 
 #explenation-text-neighbors2{
-    font-size: 1.8vmax;
-    top: 53vh;
+    font-size: 2.1vmax;
+    top: 52vh;
     text-align: right;
+    width: 90vw;
+    right: 5vw;
 } 
 #explenation-text-bold-neighbors{
     text-align: right;
-    font-size: 1.8vmax;
+    font-size: 2vmax;
     top: 35vh;
+    width: 90vw;
+    right: 6vw;
 }
 
+.explenation-text-bold{
+    font-size: 2.4vmax;
+    width: 90vw;
+    top: 40vh;
+    right: 5vw;
+}
  .explenation-text{
    position: absolute;
     font-size: 2.4vmax;
@@ -1153,7 +1208,7 @@ body{
         position: absolute;
         width: 65vw;
         right: 5vw;
-        font-size: 1.7vmax;
+        font-size: 1.9vmax;
         color: #052554;
         font-weight: 500;
         top: 6vh;
@@ -1175,7 +1230,7 @@ body{
         font-size: 1.4vmax;
         color: #052554;
         font-weight: 500;
-        top: 68vh;
+        top: 70vh;
         right: 2.5vw;
         font-weight: 700;
         text-decoration: underline;
@@ -1240,13 +1295,36 @@ body{
         right: 5vw;
     }
 
-
-
-
-
-
-
+#white-div-neighbors{
+    width: 86vw;
+    height: 18vh;
+    top: 66vh;
+    right: 7VW;
 }
 
 
+#white-div-distress{
+    width: 86vw;
+    height: 33vh;
+    top: 47vh;
+    right: 7VW;
+}
 
+#movePages-distress{
+    top: 26vh;
+}
+
+
+#white-div-agriculture{
+    width: 70vw;
+    height: 28vh;
+    top: 30vh;
+    right: 15VW;
+}
+
+#movePages-agriculture{
+    top: 39vh;
+}
+
+
+}

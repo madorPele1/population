@@ -368,6 +368,7 @@ body{
     }
 
 
+
     #pkarIcon{
         position: absolute;
         width: 12vw;
@@ -375,6 +376,29 @@ body{
         top: 1vh;
         right: 24vw;
     }
+
+ 
+    .backbutton{
+        position: absolute;
+        width: 16vw;
+        height: 4vh;
+        border-radius: 40px;
+        text-align: center;
+        padding: 1vh;
+        font-size: 3vmax;
+        top: 81vh;
+        right: 5vw;
+    }
+
+    #homeIcon{
+        position: absolute;
+        width: 14vw;
+        height: 14vh;
+        top: 77vh;
+        right: 80vw;
+        cursor: pointer;
+    }
+
 
     #soliderSpeech{
         position: absolute;
@@ -469,14 +493,14 @@ body{
     .chap1-info {
         width: 90vw;
         right: 5vw;
-        height: 55vh;
+        height: 36vh;
         top: 43vh;
     }
 
     .call-title {
         height: 2.5vh;
-        padding-right: 2vw;
-        padding-bottom:3vw ;
+        padding-right: 2.8vw;
+        padding-bottom:0vw ;
     }
 
     .first-call {
@@ -551,7 +575,15 @@ body{
      right:3vw;
 }
 
+.spec-call {
+    padding-top: 7vh;
+    padding-bottom: 0vh;
+}
+
+
+
 
 }
+
 
 

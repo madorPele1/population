@@ -77,6 +77,7 @@ body{
     width:70vw;
     height: 55vh;
     top: 6vh;
+
 }
 
 .bubbleText{
@@ -390,6 +391,7 @@ body{
     top: 83vh;
     right: 63vw;
 }
+
 #soliderHome{
     position: absolute;
     width:53vw;
@@ -444,6 +446,5 @@ body{
         top: 54vh;
         left: 58vw;
     }
-
 
 }

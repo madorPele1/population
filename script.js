@@ -9,6 +9,15 @@ let currentArrow;
 let safeArrivalCounter;
 var imgCounter1;
 var imgCounter2;
+let emergencyCounter;
+let emergencyAns1;
+let emergencyAns2;
+let emergencyAns3;
+let emergencyAns4;
+let emergencyAns5;
+let emergencyAns6 = ["", "", ""];
+let emergencyAns7 = ["", "", ""];
+let emergencyAns8 = ["", ""];
 const CIRCLE_TEXT = ["מיידי", "15 שניות", "30 שניות", "45 שניות", "דקה", "דקה וחצי"];
 const SAFE_ARRIVAL = ["בדקו ביחד עם האדם המבוגר כמה זמן עומד לרשותו כדי להיכנס למרחב המוגן ובחרו עימו את המרחב המוגן בהתאם.", "חשוב לתכנן מראש את נתיב ההגעה למרחב המוגן ולפנות את הדרך אליו ממכשורלים שעלולים להפריע לתנועה, כמו נפילות ופציעות. תרגלו ביחד, אם הדבר אפשרי, את ההגעה למרחב המוגן בזמן.", "אם המרחב המוגן של האדם המבוגר הוא חדר המדרגות,והכינו מראש כיסא מתאים בחדר המדרגות.", 
     '<b>אם קיים קושי בניידות (אדם הנעזר בכיסא גלגלים או בהליכון ומרותקי מיטה) -</b><br>דאגו להכין מיטה בממ"ד או בחדר פנימי והצמידו אותה לקיר פנימי, מתחת לקו חלונות ולא מול הדלת. וודאו שלא מותקנים מעל למיטה מדפים וחפצים שעלולים ליפול עליו.', `<b>אם קיים קושי לעבור מישיבה על ספה לכיסא גלגלים בזמן קצר- </b><br>הצמידו את הספה לקיר פנימי, מתחת לקו חלונות ולא מול הדלת.
@@ -69,6 +78,9 @@ window.addEventListener('load', () => {
     imgCounter1 = 0;
     imgCounter2 = 8;
     safeArrivalCounter = 0;
+    emergencyCounter = 0;
+    distressCounter = 0;
+    prepCounter = 0;
     neighborsCounter = 0;
     agricultureCounter = 0;
     helpCounter = 0;
@@ -111,6 +123,7 @@ window.addEventListener('load', () => {
         document.getElementById(`front-arrow-neighbors`).addEventListener("click", infoDivForwardsManager);
         document.getElementById(`front-arrow-agriculture`).addEventListener("click", infoDivForwardsManager);
         document.getElementById(`front-arrow-help`).addEventListener("click", infoDivForwardsManager);
+        document.getElementById(`front-arrow-distress`).addEventListener("click", infoDivForwardsManager);
         for (i=5; i<=7; i++) {
         document.getElementById(`circle${i}`).addEventListener("click",popExplenationManager);
         };
@@ -120,6 +133,18 @@ window.addEventListener('load', () => {
          for (i=0; i<=9; i++) {
             document.getElementById(`emphasis${i}`).addEventListener("click",empsisManager);
         };
+        for (i=1; i<=3; i++) {
+            document.getElementById(`btn-add-contact${i}`).addEventListener("click",addContact);
+        };
+        document.getElementById(`front-arrow-prep`).addEventListener("click", infoDivForwardsManager);
+        clockManager();
+        document.getElementById(`front-arrow-emergency`).addEventListener("click", emergencyDivManager);
+        let buttonEmergency = document.getElementsByClassName("button-emergency");
+        for (i=0; i<buttonEmergency.length; i++) {
+            buttonEmergency[i].addEventListener("click", buttonEmergencyManager);
+        };
+        
+
     }
 });
 
@@ -188,6 +213,14 @@ const backManager = () => {
             document.getElementById(`main-page1`).style.display="block";
             document.getElementById(`category${currentCategory}-page`).style.display="none";
             document.getElementById(`back-button`).style.display="none";
+        }
+    } else if (currentPage === "category5.html") {
+        if (document.getElementById("emergency-plan").style.display = "none") {
+            document.getElementById(`main-page1`).style.display="block";
+            document.getElementById(`category${currentCategory}-page`).style.display="none";
+            document.getElementById(`back-button`).style.display="none";
+        } else {
+            document.getElementById("emergency-plan").style.display = "none";
         }
     } else {
         document.getElementById(`main-page1`).style.display="block";
@@ -316,6 +349,22 @@ const infoDivBackManager = (event) => {
         document.getElementById(`white-div-text1-${currentArrow}`).innerHTML = IMPORTANT_TEXT[importantCounter];
         document.getElementById(`page-move-color-${currentArrow}`).innerHTML = IMPORTANT_DOTS[importantCounter];
         document.getElementById(`white-div-num1-${currentArrow}`).innerText = importantCounter + 1;
+    } else if (currentArrow === "distress") {
+        distressCounter--;
+        document.getElementById(`distress-text`).innerHTML = DISTRESS_TEXT[distressCounter];
+        document.getElementById(`distress-info-icon`).setAttribute("src", `../assets/images/distrees-icon${distressCounter + 1}.svg`);
+        document.getElementById(`page-move-color-${currentArrow}`).innerHTML = DISTRESS_DOTS[distressCounter];
+    } else if (currentArrow === "prep") {
+        prepCounter--;
+        document.getElementById(`white-div-text1-prep`).innerHTML = PREP_TEXT[prepCounter];
+        document.getElementById(`page-move-color-${currentArrow}`).innerHTML = PREP_DOTS[prepCounter];
+        document.getElementById(`white-div-num1-${currentArrow}`).innerText = prepCounter + 1;  
+        if (prepCounter === 6) {
+            document.getElementById(`build-emergency-plain`).style.display = `block`;
+        }
+         else{
+            document.getElementById(`build-emergency-plain`).style.display = `none`;
+        }
     }
 
     if (currentPage === "category4.html") {
@@ -338,12 +387,22 @@ const infoDivBackManager = (event) => {
             document.getElementById(`back-arrow-help`).style.opacity = 0;
             document.getElementById(`back-arrow-help`).removeEventListener("click", infoDivBackManager);
         };
+        
+        if (distressCounter === 0) {
+            document.getElementById(`back-arrow-distress`).style.opacity = 0;
+            document.getElementById(`back-arrow-distress`).removeEventListener("click", infoDivBackManager);
+        }
     } else if (currentPage === "category2.html") {
         if (importantCounter === 0) {
             document.getElementById(`back-arrow-important`).style.opacity = 0;
             document.getElementById(`back-arrow-important`).removeEventListener("click", infoDivBackManager);
         };
-    };
+    } else if (currentPage === "category5.html") {
+        if (prepCounter === 0) {
+            document.getElementById(`back-arrow-prep`).style.opacity = 0;
+            document.getElementById(`back-arrow-prep`).removeEventListener("click", infoDivBackManager);
+        };
+    }
 
     document.getElementById(`front-arrow-${currentArrow}`).style.opacity = 1;
     document.getElementById(`front-arrow-${currentArrow}`).addEventListener("click", infoDivForwardsManager);
@@ -379,6 +438,22 @@ const infoDivForwardsManager = (event) => {
         document.getElementById(`white-div-text1-${currentArrow}`).innerHTML = IMPORTANT_TEXT[importantCounter];
         document.getElementById(`page-move-color-${currentArrow}`).innerHTML = IMPORTANT_DOTS[importantCounter];
         document.getElementById(`white-div-num1-${currentArrow}`).innerText = importantCounter + 1;
+    } else if (currentArrow === "distress") {
+        distressCounter++;
+        document.getElementById(`distress-text`).innerHTML = DISTRESS_TEXT[distressCounter];
+        document.getElementById(`distress-info-icon`).setAttribute("src", `../assets/images/distrees-icon${distressCounter + 1}.svg`);
+        document.getElementById(`page-move-color-${currentArrow}`).innerHTML = DISTRESS_DOTS[distressCounter];
+    } else if (currentArrow === "prep") {
+        prepCounter++;
+        document.getElementById(`white-div-text1-prep`).innerHTML = PREP_TEXT[prepCounter];
+        document.getElementById(`page-move-color-${currentArrow}`).innerHTML = PREP_DOTS[prepCounter];
+        document.getElementById(`white-div-num1-${currentArrow}`).innerText = prepCounter + 1;
+        if (prepCounter === 6) {
+            document.getElementById(`build-emergency-plain`).style.display = `block`;
+        }
+        else{
+            document.getElementById(`build-emergency-plain`).style.display = `none`;
+        }
     }
 
     if (safeArrivalCounter === SAFE_ARRIVAL.length - 1) {
@@ -405,6 +480,18 @@ const infoDivForwardsManager = (event) => {
         document.getElementById(`front-arrow-important`).style.opacity = 0;
         document.getElementById(`front-arrow-important`).removeEventListener("click", infoDivForwardsManager);
     };
+
+    if (distressCounter === DISTRESS_TEXT.length - 1) {
+        document.getElementById(`front-arrow-distress`).style.opacity = 0;
+        document.getElementById(`front-arrow-distress`).removeEventListener("click", infoDivForwardsManager);
+    };
+
+     if (prepCounter === PREP_TEXT.length - 1) {
+        document.getElementById(`front-arrow-prep`).style.opacity = 0;
+        document.getElementById(`front-arrow-prep`).removeEventListener("click", infoDivForwardsManager);
+    };
+
+
     document.getElementById(`back-arrow-${currentArrow}`).style.opacity = 1;
     document.getElementById(`back-arrow-${currentArrow}`).addEventListener("click", infoDivBackManager);
 }
@@ -471,7 +558,169 @@ const imgDisplayManager = (event) => {
     } else if (arrowNum === "2") {
         document.getElementById(`page-move-color-equip-${arrowNum}`).innerHTML = currentEquip[window[`imgCounter${arrowNum}`] - 8];
     };
-
 };
 
+const clockManager = () => {
+    function CircularSlider(canvasId, messageId) {
+    const canvas = document.getElementById(canvasId);
+    const ctx = canvas.getContext("2d");
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+  console.log(centerY)
+    const radius = 80;
+    const totalSteps = 5;
+    const stepAngle = (2 * Math.PI) / totalSteps;
+    let currentValue = 0;
 
+    function drawSlider(value) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw Circle
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        ctx.strokeStyle = "#d9dde4";
+        ctx.lineWidth = 8;
+        ctx.stroke();
+        ctx.closePath();
+        
+        // Draw Active Arc
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, -Math.PI / 2, -Math.PI / 2 + value * stepAngle);
+        ctx.strokeStyle = "#112c59";
+        ctx.lineWidth = 8;
+        ctx.stroke();
+        ctx.closePath();
+        
+        // Draw Knob
+        const angle = -Math.PI / 2 + value * stepAngle;
+        const knobX = centerX + radius * Math.cos(angle);
+        const knobY = centerY + radius * Math.sin(angle);
+        ctx.beginPath();
+        ctx.arc(knobX, knobY, 10, 0, 2 * Math.PI);
+        ctx.fillStyle = "#112c59";
+        ctx.fill();
+        ctx.lineWidth = 4;
+
+        ctx.strokeStyle = "#ffffffff";
+        ctx.stroke();
+        ctx.closePath();
+        
+        // Show Value
+        ctx.font = "30px Assistant";
+        ctx.fontWeight = "800";
+        ctx.fillStyle = "#112c59";
+        ctx.textAlign = "center";
+       
+        ctx.fillText(CIRCLE_TEXT[value], centerX, centerY + 5);
+        emergencyAns2 = CIRCLE_TEXT[value];
+
+    }
+
+    function updateValue(event) {
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left - centerX;
+        const y = event.clientY - rect.top - centerY;
+        let angle = Math.atan2(y, x);
+        angle += Math.PI / 2;
+        if (angle < 0) angle += 2 * Math.PI;
+        
+        currentValue = Math.round(angle / stepAngle);
+        if (currentValue > totalSteps) currentValue = totalSteps;
+        
+        drawSlider(currentValue);
+        // showMessage(currentValue);
+    }
+
+    let dragging = false;
+    canvas.addEventListener("mousedown", function (event) {
+        dragging = true;
+        updateValue(event);
+    });
+    canvas.addEventListener("mousemove", function (event) {
+        if (dragging) {
+            updateValue(event);
+        }
+    });
+    canvas.addEventListener("mouseup", function () {
+        dragging = false;
+    });
+    canvas.addEventListener("mouseleave", function () {
+        dragging = false;
+    });
+
+    drawSlider(currentValue);
+}
+
+// Initialize multiple sliders
+let circle1 = new CircularSlider("sliderCanvas1", "message1");
+
+}
+
+const emergencyDivManager = (event) => {
+    let arrowClicked =  event.target.id;
+    if (emergencyCounter >= 0) {
+        document.getElementById(`div-${emergencyCounter + 1}-emergency`).style.display = "none";
+        console.log(document.getElementById(`div-${emergencyCounter + 1}-emergency`));
+    }
+    if (arrowClicked === "front-arrow-emergency") {
+        emergencyCounter++;
+        document.getElementById(`back-arrow-emergency`).style.opacity = 1;
+        document.getElementById(`back-arrow-emergency`).addEventListener("click", emergencyDivManager);
+        if (emergencyCounter === 7) {
+            document.getElementById(`front-arrow-emergency`).style.opacity = 0;
+            document.getElementById(`front-arrow-emergency`).removeEventListener("click", emergencyDivManager);
+        };
+    } else {
+        emergencyCounter--;
+        document.getElementById(`front-arrow-emergency`).style.opacity = 1;
+        document.getElementById(`front-arrow-emergency`).addEventListener("click", emergencyDivManager);
+        if (emergencyCounter === 0) {
+            console.log("works");
+            document.getElementById(`back-arrow-emergency`).style.opacity = 0;
+            document.getElementById(`back-arrow-emergency`).removeEventListener("click", emergencyDivManager);
+        }
+    }
+    document.getElementById("white-div-num1-emergency").innerText = emergencyCounter + 1;
+    document.getElementById(`div-${emergencyCounter + 1}-emergency`).style.display = "block";
+    console.log(`div-${emergencyCounter + 1}-emergency`);
+    document.getElementById("page-move-color-emergency").innerHTML = DISTRESS_DOTS[emergencyCounter];
+}
+
+const buttonEmergencyManager = (event) => {
+    let emgButtonNum = event.target.id.replace(/\D/g, "");
+    if (emgButtonNum <= 4) {
+        for (i=1; i<=4; i++) {
+            document.getElementById(`button-emergency${i}`).style.backgroundColor = "#176598";
+        };
+        event.target.style.backgroundColor = "#052554";
+        emergencyAns1 = event.target.innerText;
+    } else if (emgButtonNum > 4 && emgButtonNum <= 10) {
+        for (i=4; i<=10; i++) {
+            document.getElementById(`button-emergency${i}`).style.backgroundColor = "#176598";
+        };
+        event.target.style.backgroundColor = "#052554";
+        emergencyAns3 = event.target.innerText;
+
+
+        console.log(`emergencyAns1: ${emergencyAns1}, emergencyAns2: ${emergencyAns2}, emergencyAns3: ${emergencyAns3}, emergencyAns4: ${emergencyAns4}`)
+    } else {
+        if (event.target.style.backgroundColor == "rgb(5, 37, 84)") {
+            event.target.style.backgroundColor = "#176598";
+            if (emergencyAns8.includes(event.target.innerText)) {
+                let index = emergencyAns8.indexOf(event.target.innerText);
+                emergencyAns8[0] = [...array.slice(0, index), ...array.slice(index + 1)];
+            };
+        } else {
+            event.target.style.backgroundColor = "#052554";
+            emergencyAns8.push(event.target.innerText);
+            
+        }
+    }
+    console.log(emergencyAns8);
+}
+
+const addContact = (event) => {
+    let clickedContact = event.target.id.replace(/\D/g, "");
+    event.target.disabled = true;
+    emergencyAns7[clickedContact - 1] = document.getElementById(`contact-name${clickedContact}`).value + "-"+ document.getElementById(`phoneNumber${clickedContact}`).value+ `<br>`;
+}

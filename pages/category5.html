@@ -14,6 +14,10 @@
         <img class="icon" src="../assets/images/mute.svg" alt="mute">
         <img class="icon" src="../assets/images/accessibility.svg" alt="accessibility">
     </div>
+    
+    <img id="pkarIcon" src="../assets/images/pkarIcon.svg" alt="pkarIcon">
+    <img id="homeIcon" src="../assets/images/homeIcon.svg" alt="homeIcon" onclick="window.location.href = `../category0.html`;">    
+    <div class="button backbutton" id="back-button">חזור</div>
     <div id="main-page1">
         <img class="solider" src="../assets/images/solider.svg" alt="soliderSpeech">
         <div class="categoryTitle"> <img class="titleIcon" src="../assets/images/copinIcon.svg" alt="alertIcon">היערכות לחירום</div>
@@ -26,7 +30,23 @@
            </div>
     </div>
 
-        <div id="category1-page" class="page5"></div>
+        <div id="category1-page" class="page5">
+                <div class="categoryTitle"> <img class="titleIcon" src="../assets/images/copinIcon.svg" alt="alertIcon">הכנת הבית לחירום</div>
+                <div class="explenation-text">בזמן אירועי חירום כמו ירי רקטות וטילים, רעידת אדמה, מזג אוויר סוער, שריפה או אירוע חומרים מסוכנים, יש השפעה מכרעת להכנת הסביבה הפיזית מבעוד מועד על הסיכוי לצלוח את האירוע בשלום.</div>
+                <button id="build-emergency-plain" onclick='document.getElementById(`emergency-plan`).style.display = `block`'>למעבר לבניית תכנית חירום אישית-שאלון אינטרקטיבי</button>
+                    <div class="white-div" id="white-div-prep">
+                        <p id="white-div-num1-prep" class="white-div-num">1</p>
+                        <p id="white-div-text1-prep"><b> נכין את המרחב המוגן</b><br>נבחר את המרחב המוגן ונכין אותו, לרבות ציוד לחירום ודרכי התקשרות. נקבע ארונות ומדפים, נוודא שאין בו חומרים דליקים, מסוכנים ורעילים או פריטי זכוכית או חרסינה שעלולים להתנפץ, כמו מראות ואריחי קרמיקה'</p>
+                            <div class="move-pages-white-div" id="movePages-prep">
+                            <img src="../assets/images/white-div-arrow-back.svg" alt="arrow-down" class="arrow-move" id="back-arrow-prep"/>
+                            <p id="page-move-color-prep" class="page-move-color"><b>●</b>●●●●●●</p>
+                            <img src="../assets/images/white-div-arrow.svg" alt="arrow-down" class="arrow-move" id="front-arrow-prep"/>
+                    </div>
+                </div>
+        </div>
+        
+     
+
         <div id="category2-page" class="page5">
             <div class="categoryTitle" id="categoryTitleShort"> <img class="titleIcon" src="../assets/images/copinIcon.svg" alt="alertIcon">תוכנית חירום</div>
             <div class="explenation-text">הכנת תוכנית חירום מקלה על קבלת החלטות בעת מצב חירום ומגדילה את תחושת היעילות והשליטה במצב.<br>
@@ -132,8 +152,146 @@
         </div>
         <div id="category5-page" class="page5"></div>
 
-    <img id="pkarIcon" src="../assets/images/pkarIcon.svg" alt="pkarIcon">
-    <img id="homeIcon" src="../assets/images/homeIcon.svg" alt="homeIcon" onclick="window.location.href = `../category0.html`;">    
-    <div class="button backbutton" id="back-button">חזור</div>
+        <div id="emergency-plan"  >
+            <div id="start-page">
+                <img id="soliderSpeech" src="../assets/images/soliderSpeech.svg" alt="soliderSpeech">
+                <div id="startTitle" class="headline">בניית תכנית חירום אישית</div>
+                <div class="text" id="startText">בשאלון זה נוכל לעבור יחד על כל דרכי ההיערכות לחירום האישיים שלכם, בסיומו תקבלו תכנית חירום אישית שתשמש אתכם במקרה הצורך ותוכלו להדפיס ולתלות אותה בביתכם</div>
+                <div class="button" id="startButton" onclick="document.getElementById(`main-page`).style.display=`block`; document.getElementById(`start-page`).style.display=`none`;">התחל בשאלון</div>
+            </div>
+            <div id="main-page">
+                <div id="startTitle" class="headline">בניית תכנית חירום אישית</div>
+                    <div class="white-div" id="white-div-emergency">
+                        <p id="white-div-num1-emergency" class="white-div-num">1</p>
+                        <div id="div-1-emergency">
+                            <p id="white-div-text1-prep"><b>איך אני מעדיף לקבל התרעות? (באיזו פלטפורמה/ אמצעי)</b><br></p>
+                            <div class="button-div-emergency">
+                                <button type="button" class="button-emergency" id="button-emergency1">יישומון פיקוד העורף</button>
+                                <button type="button" class="button-emergency" id="button-emergency2">פורטל החירום הלאומי</button>
+                                <button type="button" class="button-emergency" id="button-emergency3">צופרים חיצוניים בלבד</button>
+                                <button type="button" class="button-emergency" id="button-emergency4">אמצעי התרעה משלימים (ערוצי טלוויזיה,  רדיו וטלגרם)</button>
+                            </div>
+                        </div>
+                                 
+                        <div id="div-2-emergency">
+                            <p id="white-div-text1-emergency"><b>מה הוא זמן ההתגוננות שלי? </b><br></p>
+                            <canvas id="sliderCanvas1" width="200" height="200"></canvas>
+                        </div>
+
+                        <div id="div-3-emergency">
+                            <p id="white-div-text1-prep"><b>מה המרחב הכי מוגן שלי?</b><br></p>
+                            <div class="button-div-emergency">
+                                <button type="button" class="button-emergency" id="button-emergency5">ממ"ד</button>
+                                <button type="button" class="button-emergency" id="button-emergency6">ממ"ק</button>
+                                <button type="button" class="button-emergency" id="button-emergency7">ממ"מ</button>
+                                <button type="button" class="button-emergency" id="button-emergency8">מקלט</button>
+                                <button type="button" class="button-emergency" id="button-emergency9">חדר מדרגות פנימי</button>
+                                <button type="button" class="button-emergency" id="button-emergency10">חלל פנימי</button>
+                            </div>
+                        </div>
+
+                        <div id="div-4-emergency">
+                            <p id="white-div-text1-prep"><b>האם אני נדרש בציוד נוסף בהתאם למחלה/ <br> צרכים מיוחדים שיש לי?</b><br></p>
+                            <input oninput="emergencyAns4 = document.getElementById(`emergency4-ans`).value;" id="emergency4-ans" name="emergency4-ans" rows="4" cols="50">    
+                        </div>
+
+                        <div id="div-5-emergency">
+                            <p id="white-div-text1-prep"><b>מה הפעולות היומיומיות שנצטרך לזכור במצבי חירום</b><br></p>
+                            <input oninput="emergencyAns5 = document.getElementById(`emergency5-ans`).value;" id="emergency5-ans" name="emergency5-ans" rows="4" cols="50">    
+                        </div>
+                        
+                        <div id="div-6-emergency">
+                            <p id="white-div-text1-prep"><b>כתיבת הסבר מדויק למה אני צריך ומה מצבי עבור גורמי חירום</b><br></p>
+                            <div class="form-emeregency6">
+                                <label for="fname">אני סובל מקושי שנגרם כתוצאה מ...</label><br>
+                                <input type="text" id="emergency6-hardness" name="fname" oninput="emergencyAns6[0] = document.getElementById(`emergency6-hardness`).value;"><br>
+                                <label for="lname">בעקבות מצבי יש לי בעיה ב-....</label><br>
+                                <input type="text" id="emergency6-problem" name="lname" oninput="emergencyAns6[1] = document.getElementById(`emergency6-problem`).value;"><br>
+                                <label for="lname">על מנת שאתמודד איתה אני זקוק ל…</label><br>
+                                <input type="text" id="emergency6-need" name="lname" oninput="emergencyAns6[2] = document.getElementById(`emergency6-need`).value;"><br><br>
+                                <button>אישור</button>
+                            </div>
+                        </div>
+
+                        <div id="div-7-emergency">
+                            <p id="white-div-text1-prep"><b>אנשי הקשר שלי לחירום</b><br></p>
+                            <div class="contact-persons">
+                                <div class="contact-person">
+                                    <input type="text" placeholder="שם" id="contact-name1">
+                                    <input type="text" placeholder="מספר טלפון" id="phoneNumber1" maxlength="10">
+                                    <button id="btn-add-contact1">הוספת איש קשר</button>
+                                </div>
+                                <div class="contact-person">
+                                    <input type="text" placeholder="שם" id="contact-name2">
+                                    <input type="text" placeholder="מספר טלפון" id="phoneNumber2" maxlength="10">
+                                    <button id="btn-add-contact2">הוספת איש קשר</button>
+                                </div>
+                                <div class="contact-person">
+                                    <input type="text" placeholder="שם" id="contact-name3">
+                                    <input type="text" placeholder="מספר טלפון" id="phoneNumber3" maxlength="10">
+                                    <button id="btn-add-contact3">הוספת איש קשר</button>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div id="div-8-emergency">
+                            <p id="white-div-text1-prep"><b>בחירת פעולות שעוזרות לי להירגע בשעת הצורך</b><br></p>
+                            <div class="emergency8-container">
+                                <div class="button-div-emergency8">
+                                    <button type="button" class="button-emergency" id="button-emergency11" onclick="window.print();">מוזיקה</button>
+                                    <button type="button" class="button-emergency" id="button-emergency12">לדבר עם קרוב</button>
+                                    <button type="button" class="button-emergency" id="button-emergency13">לנשום עמוק</button>
+                                </div>
+                                <label for="fname">מלל חופשי:</label><br>
+                                <input type="text" id="emergency8-input" name="fname" oninput="emergencyAns8[1] = document.getElementById(`emergency8-input`).value;"><br>
+                            </div>  
+                        </div>
+
+                        <div class="move-pages-white-div" id="movePages-emergency">
+                            <img src="../assets/images/white-div-arrow-back.svg" alt="arrow-down" class="arrow-move" id="back-arrow-emergency"/>
+                            <p id="page-move-color-emergency" class="page-move-color"><b>●</b>●●●●●●●</p>
+                            <img src="../assets/images/white-div-arrow.svg" alt="arrow-down" class="arrow-move" id="front-arrow-emergency"/>
+                        </div>
+                    </div>
+
+                    <div id="fin-table">
+                        <table>
+                            <tr>
+                                <th>במקרה הצורך, אני מקבל התרעות דרך:</th>
+                                <th>Contact</th>
+                            </tr>
+                            <tr>
+                                <td>זמן ההתגוננות שלי הוא:</td>
+                                <td>Maria Anders</td>
+                            </tr>
+                            <tr>
+                                <td>המרחב המוגן הקרוב אליי:</td>
+                                <td>Francisco Chang</td>
+                            </tr>
+                            <tr>
+                                <td>ציוד נוסף שאני זקוק לו במרחב המוגן:</td>
+                                <td>Roland Mendel</td>
+                            </tr>
+                            <tr>
+                                <td>מה הפעולות שנעשה במצב חירום:</td>
+                                <td>Helen Bennett</td>
+                            </tr>
+                            <tr>
+                                <td>הסבר צרכים לגורמי החירום:</td>
+                                <td>Yoshi Tannamuri</td>
+                            </tr>
+                            <tr>
+                                <td>בחירת פעולות שעוזרות לי להירגע בשעת צורך:</td>
+                                <td>Giovanni Rovelli</td>
+                            </tr>
+                            <tr>
+                                <td>אנשי הקשר שלי לחירום:</td>
+                                <td>Giovanni Rovelli</td>
+                            </tr>
+                        </table>
+                    </div>
+            </div>
+        </div>
+
 </body>
 </html>

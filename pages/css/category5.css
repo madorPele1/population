@@ -2,7 +2,7 @@ body{
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background-image: url('../../assets/images/coping/PurpleBackground.png');
+    background-image: url('/assets/images/coping/PurpleBackground.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -14,7 +14,7 @@ body{
 
 @font-face {
     font-family:Assistant;
-    src: url(../../assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
+    src: url(assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
 }
 
 #pkarIcon{
@@ -22,6 +22,7 @@ body{
     width: 12vw;
     height: 12vh;
     top: 4vh;
+    z-index: 2;
 }
 
 #homeIcon{
@@ -43,8 +44,22 @@ body{
     background-color: #ffb33c;
     top: 3.5vh;
     right: 85vw;
+    z-index: 5;
 }
 
+#emergency-plan {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-image: url('/assets/images/coping/PurpleBackground.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
 
 #category1-page {
     display: none;
@@ -172,6 +187,8 @@ body{
     font-size: 2.4vmax;
     top: 83vh;
     right: 5vw;
+    z-index: 3;
+    display: none;
 }
 
 
@@ -554,12 +571,368 @@ li{
     top: 15vh;
     right: 2.5vw;
 }
+
+
+.white-div {
+    width: 70vw;
+    height: 35vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2vh;
+    position: absolute;
+    top: 52vh;
+    left: 15vw;
+}
+
+.white-div-num {
+    position: relative;
+    background-color: #052554;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    right: 3vw;
+    font-size: 3vmax;
+}
+
+.move-pages-white-div {
+    width: 90%;
+    position: absolute;
+    right: 5%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    top: 24vh;    
+}
+
+
+.arrow-move {
+    height: 6vh;
+    cursor: pointer;
+}
+
+.page-move-color {
+    color: #8c8c8c;
+   font-size: 2vmax;
+}
+
+.page-move-color b {
+    color: #052554;
+}
+
+#white-div-text1-prep{
+    position: relative;
+    font-size: 3.6vmin;
+    font-weight: 400;
+    width: 55vw;
+    text-align: center;
+    right:9vw;
+    top: -15vh;
+    color: #052554;
+}
+
+#white-div-prep{
+    height: 55vh;
+    top: 40vh;
+}
+
+#movePages-prep{
+    top: 40vh;
+}
+
+#movePages-emergency{
+    top: 40vh;
+}
+
+#back-arrow-prep{
+    opacity: 0;
+}
+
+
+#build-emergency-plain{
+    position: relative;
+    font-size: 1.5vmax;
+    font-family: Assistant;
+    font-weight: 700;
+    width: 20vw;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #176598;   box-shadow: 4px 4px rgb(207, 207, 207);
+    transition: all .5s;
+    left: 0;
+    border: none;
+    padding: 3vh;
+    border-radius: 2vh;
+    top: 63vh;
+    z-index: 2;
+    right: 40vw;
+    display: none;
+}
+
+#build-emergency-plain:hover{
+   box-shadow: 0px 0px rgb(207, 207, 207);
+    left: 4px;
+    background-color: #b5b5b5;
+}
+
+.button:hover{
+     background-color: #b5b5b5;
+      box-shadow: 0px 0px #8c8c8c;
+}
+
+#startButton{
+    position: absolute;
+    width: 20vw;
+    height: 8vh;
+    border-radius: 40px;
+    text-align: center;
+    padding: 1vh;
+    padding-top: 1.5vh;
+    font-size: 2.4vmax;
+    top: 70vh;
+    right: 40vw;
+}
+
+#startTitle{
+    font-size: 4.5vmax;
+    text-align: center;
+    position: absolute;
+    top: 14vh;
+    width: 100vw;
+    font-weight: 800;
+    color: #052554;
+}
+
+
+#main-page .headline {
+    position: absolute;
+    top: 8vh;
+}
+
+
+
+#startText{
+    font-size: 3vmax;
+    position: absolute;
+    width: 70vw;
+    height: 60vh;
+    top: 30vh;
+    right: 15vw;
+    text-align: center;
+    color: #052554;
+}
+
+
+#soliderSpeech{
+    position: absolute;
+    width:100vw;
+    height: 100vh;
+    top: 35vh;
+    left: 37vw;
+}
+
+.button-div-emergency {
+    width: 90%;
+    height: 40%;
+    position: relative;
+    bottom: 12vh;
+    right: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.button-emergency {
+    height: 60%;
+    width: 14vw;
+    background-color: #176598;
+    border-radius: 1vw;
+    border: none;
+    transition: all .5s;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.4vmax;
+}
+
+.button-emergency:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+#sliderCanvas1{
+    z-index: 500;
+    position: absolute;
+    top: 20%;
+    left: 38%;
+}
+
+#white-div-text1-emergency {
+    position: relative;
+    font-size: 4.6vmin;
+    font-weight: 400;
+    width: 55vw;
+    text-align: center;
+    right:9vw;
+    top: -18vh;
+    color: #052554;
+}
+
+#div-1-emergency {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#div-2-emergency {
+    display: none;
+    height: 100%;
+}
+
+#div-3-emergency {
+    height: 100%;
+    display: none;
+}
+#div-3-emergency .button-emergency {
+    height: 60%;
+}
+
+#div-4-emergency {
+    height: 100%;
+    display: none;
+}
+
+#div-5-emergency {
+    height: 100%;
+    display: none;
+}
+
+#div-6-emergency {
+    height: 100%;
+    display: none;
+}
+
+#div-7-emergency {
+    height: 100%;
+    display: none;
+}
+
+#div-8-emergency {
+    height: 100%;
+    display: none;
+}
+
+#page-move-color-emergency {
+    position: relative;
+    top: 1vh;
+}
+
+#main-page {
+    display: none;
+}
+.form-emeregency6 {
+    position: relative;
+    bottom: 15vh;
+    right: 4vw;
+}
+
+#div-8-emergency {
+    height: 100%;
+}
+
+#white-div-emergency {
+    height: 55vh;
+    top: 25vh;
+}
+
+.emergency8-container {
+    height: 40%;
+    position: relative;
+    bottom: 24%;
+}
+
+.button-div-emergency8 {
+    height: 70%;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    right: 15%;
+}
+
+#fin-table {
+    display: none;
+    position: absolute;
+    top: 10vh;
+    width: 50vw;
+    left: 25%;
+    top: 20%;
+}
+
+#fin-table table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 70vh;
+  background-color: #91d4ff;
+  color: #002775;
+  border-radius: 1vw;
+  border-top-left-radius: 1vw;
+}
+
+#fin-table td, th {
+  border: 1px solid #eaeaea;
+  padding: 8px;
+  font-weight: 500;
+  
+}
+
+#fin-table th:nth-child(1) {
+  text-align: right;
+}
+
+#fin-table th:nth-child(2) {
+  border-top-left-radius: 1vw;
+  text-align: right;
+
+
+  background-color: #ffffff;
+  font-weight: normal;
+}
+
+#fin-table td:nth-child(even) {
+  background-color: #ffffff;
+  font-weight: normal;
+}
+
+#fin-table td:nth-child(14) {
+ border-bottom-left-radius: 1vw;
+}
+
+@media print {
+  body {
+    visibility: hidden;
+  }
+
+  #printOnly, #printOnly * {
+    visibility: visible;
+  }
+
+  #printOnly {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+
 @media screen and (max-width: 450px){
     body{
         width: 100vw;
         height: 100vh;
         margin: 0;
-        background-image: url('../../assets/images/coping/PurpleBackgroundPhone.png');
+        background-image: url('/assets/images/coping/PurpleBackgroundPhone.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;
@@ -575,28 +948,6 @@ li{
         height: 12vh;
         top: 1vh;
         right: 24vw;
-    }
-
-    
-    .backbutton{
-        position: absolute;
-        width: 16vw;
-        height: 4vh;
-        border-radius: 40px;
-        text-align: center;
-        padding: 1vh;
-        font-size: 3vmax;
-        top: 81vh;
-        right: 5vw;
-    }
-
-    #homeIcon{
-        position: absolute;
-        width: 14vw;
-        height: 14vh;
-        top: 77vh;
-        right: 80vw;
-        cursor: pointer;
     }
 
 
@@ -693,6 +1044,29 @@ li{
         right: -1vw;
     }
 
+
+    .backbutton{
+        position: absolute;
+        width: 16vw;
+        height: 4vh;
+        border-radius: 40px;
+        text-align: center;
+        padding: 1vh;
+        font-size: 3vmax;
+        top: 81vh;
+        right: 5vw;
+    }
+
+    #homeIcon{
+        position: absolute;
+        width: 14vw;
+        height: 14vh;
+        top: 77vh;
+        right: 80vw;
+        cursor: pointer;
+    }
+
+    
     .close-button{
         font-weight: 700;
         color: white;
@@ -918,9 +1292,4 @@ li{
     font-size: 2.1vmax;
     top: 17vh;
 }
-
 }
-
-
-
-

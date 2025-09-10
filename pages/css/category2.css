@@ -2,7 +2,7 @@ body{
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background-image: url('../../assets/images/protectedSpace/PinkBackground.png');
+    background-image: url('/assets/images/protectedSpace/PinkBackground.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -605,7 +605,7 @@ body{
         width: 100vw;
         height: 100vh;
         margin: 0;
-        background-image: url('../../assets/images/protectedSpace/PinkBackgroundPhone.png');
+        background-image: url('/assets/images/protectedSpace/PinkBackgroundPhone.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;
@@ -1002,4 +1002,3 @@ body{
        width: 7vw; 
     }
 }
-

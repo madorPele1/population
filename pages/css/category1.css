@@ -2,7 +2,7 @@ body{
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background-image: url('../../assets/images/lifeSaving/YellowBackground.png');
+    background-image: url('/assets/images/lifeSaving/YellowBackground.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -14,7 +14,7 @@ body{
 
 @font-face {
     font-family:Assistant;
-    src: url(../../assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
+    src: url(assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
 }
 
 #homeIcon{
@@ -339,7 +339,7 @@ body{
         width: 100vw;
         height: 100vh;
         margin: 0;
-        background-image: url('../../assets/images/lifeSaving/YellowBackgroundPhone.png');
+        background-image: url('/assets/images/lifeSaving/YellowBackgroundPhone.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;
@@ -407,7 +407,6 @@ body{
         transition: all .4s;
     }
 
- 
     .backbutton{
         position: absolute;
         width: 16vw;
@@ -428,7 +427,6 @@ body{
         right: 80vw;
         cursor: pointer;
     }
-
 
     #pkarIcon{
         position: absolute;
@@ -530,14 +528,6 @@ body{
 b{
     font-weight: 600;
 }
-
 }
-
-
-
-
-
-
-
 
 

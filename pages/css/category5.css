@@ -417,7 +417,6 @@ body{
 li{
     margin: 0.5vw;
 }
-
 .beckgroundExplenation{
     position: absolute;
     width:100vw;
@@ -624,7 +623,7 @@ li{
 
 #white-div-text1-prep{
     position: relative;
-    font-size: 3.6vmin;
+    font-size: 4.3vmin;
     font-weight: 400;
     width: 55vw;
     text-align: center;
@@ -650,6 +649,65 @@ li{
     opacity: 0;
 }
 
+#emergency4-ans{
+    position: absolute;
+    background-color: #f6f3f3;
+    width: 80%;
+    height: 18%;
+    border: none;
+    font-family:Assistant;
+    top: 23vh;
+    right: 10%;
+}
+
+
+#emergency5-ans{
+    position: absolute;
+    background-color: #f6f3f3;
+    width: 80%;
+    height: 18%;
+    border: none;
+    font-family:Assistant;
+    top: 23vh;
+    right: 10%;
+}
+
+#emergency6-hardness{
+    position: absolute;
+    background-color: #f6f3f3;
+    width: 80%;
+    height: 18%;
+    border: none;
+    font-family:Assistant;
+    top: 5vh;
+    right: 10%;
+}
+
+#emergency6-problem{
+    position: absolute;
+    background-color: #f6f3f3;
+    width: 80%;
+    height: 18%;
+    border: none;
+    font-family:Assistant;
+    top: 23vh;
+    right: 10%;
+}
+
+#emergency6-need{
+    position: absolute;
+    background-color: #f6f3f3;
+    width: 80%;
+    height: 18%;
+    border: none;
+    font-family:Assistant;
+    top: 23vh;
+    right: 10%;
+}
+
+.form-emeregency6{
+    color: #052554;
+}
 
 #build-emergency-plain{
     position: relative;
@@ -754,6 +812,10 @@ li{
     color: #ffffff;
     font-weight: 600;
     font-size: 1.4vmax;
+}
+
+.button-emergency-protected-space {
+    margin: 1vh;
 }
 
 .button-emergency:hover {
@@ -861,6 +923,17 @@ li{
     right: 15%;
 }
 
+#protected-space-container{
+    width:70%;
+    height: 30%;
+    position: relative;
+    bottom: 12vh;
+    right: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-flow: row wrap;
+}
 #fin-table {
     display: none;
     position: absolute;
@@ -1294,3 +1367,4 @@ li{
 }
 
 }
+

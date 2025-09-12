@@ -195,7 +195,7 @@ body{
 }
 
 .spec-call {
-    padding-top: 8vh;
+    padding-top: 5vh;
     padding-bottom: 0vh;
     display: flex;
     flex-wrap: wrap;
@@ -230,6 +230,17 @@ body{
     font-weight: bold;
     font-size: 1.4vmax;
     position: relative;
+}
+
+.call-chap3 {
+    padding-top: 8vh;
+    padding-bottom: 0vh;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: solid 2px #c3c9d0;
+    border-radius: 2vh;
+    transition: all .5s;
+    background-color: #ffffff;
 }
 
 .info-div {
@@ -328,6 +339,56 @@ body{
 
 #computer{
      width:6vw;
+}
+
+.category-questions1{
+    width: 100vw;
+    position: absolute;
+    color: #052554;
+    font-size: 4vmax;
+    text-align: center;
+    top: 5vh;
+}
+
+.category-questions2{
+    width: 100vw;
+    position: absolute;
+    font-weight: 900;
+    color: #052554;
+    font-size: 4vmax;
+    text-align: center;
+    top: 13vh;
+
+}
+
+#chap2-info{
+    width: 60vw;
+    position: absolute;
+    right: 20vw;
+    border-radius: 2vw;
+    font-size: 1.8vmax;
+    top: 25%;
+    overflow-y: hidden;
+    height: 60vh;
+}
+
+.call-title1 {
+    height:4vh;
+    color: #2f3043;
+    padding-right: 2vw;
+}
+
+.name-info1 {
+    padding-bottom: 3vh;
+    position: relative;
+    bottom: 3vh;
+    padding-right:0vw;
+    padding-bottom: 1vw;
+    font-size: 1.7vmax;
+    font-family: Assistant;
+    font-weight: 700;
+    color: #052554;
+    
 }
 
 @media screen and (max-width: 450px){
@@ -557,7 +618,54 @@ body{
     padding-bottom: 0vh;
 }
 
+.spec-call1{
+    padding-top: 4vh;
+    padding-bottom: 0vh;
+}
 
+.category-questions1{
+    width: 100vw;
+    position: absolute;
+    color: #052554;
+    font-size: 3.6vmax;
+    text-align: center;
+    top: 13vh;
+}
+
+.category-questions2{
+    width: 100vw;
+    position: absolute;
+    font-weight: 900;
+    color: #052554;
+    font-size: 3.6vmax;
+    text-align: center;
+    top: 17vh;
+
+}
+
+.call-title1 {
+        height: 2.5vh;
+        padding-right: 2vw;
+        padding-left: 9vw;
+    }
+
+
+
+    .name-info1 {
+        position: relative;
+        padding-right: 2vw;
+        padding-bottom: 1vw;
+        font-size: 2.1vmax;
+        font-family: Assistant;
+        font-weight: 700;
+    }
+
+    #chap2-info{
+        top: 22vh;
+        width: 90%;
+        height: 58vh;
+        right: 5%;
+    }
 
 
 }

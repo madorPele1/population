@@ -933,11 +933,11 @@ body{
         }
 
     .categoryTitle{
-         width: 95vw;
+        width: 100vw;
         position: absolute;
         font-weight: 900;
         color: #052554;
-        font-size: 3.5vmax;
+        font-size: 3.3vmax;
         text-align: center;
         top: 8vh;
     }
@@ -1043,12 +1043,12 @@ body{
 
     #white-div-text1-neighbors{
         position: relative;
-        font-size: 4vmin;
+        font-size: 4.3vmin;
         font-weight: 400;
         width: 60vw;
         text-align: center;
-        right:11vw;
-        top: -5vh;
+        right:13vw;
+        top: -6vh;
         color: #052554;
     }
 
@@ -1128,26 +1128,28 @@ body{
 }
 
 #explenation-text-neighbors3{
-    font-size: 2.1vmax;
+    font-size: 1.8vmax;
     top: 20vh;
     width: 90vw;
     right: 5vw;
 }
 
 #explenation-text-neighbors2{
-    font-size: 2.1vmax;
-    top: 52vh;
+     font-size: 1.8vmax;
+    top: 48vh;
     text-align: right;
     width: 90vw;
     right: 5vw;
 } 
 #explenation-text-bold-neighbors{
     text-align: right;
-    font-size: 2vmax;
-    top: 35vh;
+     font-size: 1.7vmax;
+    top: 33vh;
     width: 90vw;
     right: 6vw;
 }
+
+
 
 .explenation-text-bold{
     font-size: 2.4vmax;
@@ -1316,21 +1318,21 @@ body{
 
 #white-div-neighbors{
     width: 86vw;
-    height: 18vh;
-    top: 66vh;
+    height: 20vh;
+    top: 60vh;
     right: 7VW;
 }
 
 
 #white-div-distress{
-    width: 86vw;
-    height: 33vh;
-    top: 47vh;
-    right: 7VW;
+    width: 88vw;
+    height: 35vh;
+    top: 44vh;
+    right: 6VW;
 }
 
 #movePages-distress{
-    top: 26vh;
+    top: 29vh;
 }
 
 
@@ -1355,13 +1357,42 @@ body{
 
 #white-div-help{
     width: 65vw;
-    height: 28vh;
+    height: 29vh;
     top: 27vh;
     right: 16VW;
 }
 
 #movePages-help{
     top: 43vh;
+}
+
+#distress-text{
+    position: relative;
+    color: #052554;
+    top: 4vh;
+    font-size: 1.7vmax;
+    width: 52vw;
+    right: 2vw;
+}
+
+#explenation-text-bold-help{
+    position: relative;
+    top:36vh;
+     font-size: 2vmax;
+}
+
+#explenation-text-help{
+    font-size: 2vmax;
+}
+
+.distress-info-icon {
+    position: relative;
+    top: 3vh;
+   
+}
+
+#movePages-neighbors{
+    top: 13vh;
 }
 
 }

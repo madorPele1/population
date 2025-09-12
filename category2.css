@@ -1,0 +1,1047 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../../assets/images/protectedSpace/PinkBackground.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    direction: rtl;
+    font-family: Assistant;
+}
+
+@font-face {
+    font-family:Assistant;
+    src: url(../../assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
+}
+
+#homeIcon{
+    position: absolute;
+    width: 12vw;
+    height: 12vh;
+    top: 83vh;
+    right: 88vw;
+  z-index: 300;
+}
+
+#homeIcon:hover{
+  cursor: pointer;
+}
+
+
+#pkarIcon{
+    position: absolute;
+    width: 12vw;
+    height: 12vh;
+    top: 4vh;
+}
+
+#navbar{
+    position: absolute;
+    width: 15vw;
+    height: 9vh;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: #ffb33c;
+    top: 3.5vh;
+    right: 85vw;
+}
+.icons{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 12vw;
+    top: 5vh;
+    padding-right: 1vh;
+    right: 85vw;
+     z-index: 300;
+}
+
+.icon{
+    width:6vw;
+    height: 6vh;
+}
+
+.icon:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+
+#categories{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    width: 70vw;
+    height: 40vh;
+    position: absolute;
+    top: 23vh;
+    right: 15vw;
+ 
+}
+
+.category{
+    position: relative;
+    width: 35vh;
+    height:19vh;
+    filter: drop-shadow(5px 5px  #8c8c8c7a);
+    transition: all .5s;
+    left: 0;
+    cursor: pointer;
+    margin: 0.8vw;
+}
+
+.category:hover{
+    left: 5px;
+    filter: drop-shadow(0px 0px  #8c8c8c);
+}
+
+.categoryTitle{
+    width: 95vw;
+    position: absolute;
+    font-weight: 900;
+    color: #052554;
+    font-size: 4vmax;
+    text-align: center;
+    top: 5vh;
+}
+
+.titleIcon{
+    position: relative;
+    width: 10vw;
+    height: 10vh;
+    top: 2vh;
+    right: 2vw;
+}
+
+.solider{
+    display: block;
+    position: absolute;
+    width:100vw;
+    height: 100vh;
+    top: 32vh;
+    left: 37vw;
+}
+
+#category1-page {
+    display: none;
+}
+
+#category2-page {
+    display: none;
+}
+
+#category3-page {
+    display: none;
+}
+
+#category4-page {
+    display: none;
+}
+
+#category5-page {
+    display: none;
+}
+
+#category6-page {
+    display: none;
+}
+
+
+#main-page1{
+    display: block;
+}
+
+#back-button {
+    display: none;
+}
+
+.button{
+    font-weight: 700;
+    color: white;
+    background-color: #052554;
+    box-shadow: 3px 3px #8c8c8c;
+    cursor: pointer;
+    transition: all .5s;
+    left: 0;
+}
+
+.button:hover{
+     background-color: #b5b5b5;
+      box-shadow: 0px 0px #8c8c8c;
+}
+
+.backbutton{
+    position: absolute;
+    width: 7vw;
+    height: 8vh;
+    border-radius: 40px;
+    text-align: center;
+    padding: 1vh;
+    padding-top: 1.5vh;
+    font-size: 2.4vmax;
+    top: 83vh;
+    right: 5vw;
+    z-index: 999;
+}
+
+.chap1-info {
+    width: 60vw;
+    position: absolute;
+    right: 20vw;
+    border-radius: 2vw;
+    font-size: 1.8vmax;
+    top: 25%;
+    overflow-y: hidden;
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+.call-title {
+    height: 3.5vh;
+    color: #2f3043;
+    padding-right: 2vw;
+}
+
+.spec-call {
+    padding-top: 5vh;
+    padding-bottom: 0vh;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: solid 2px #c3c9d0;
+    border-radius: 2vh;
+    transition: all .5s;
+    background-color: #ffffff;
+}
+
+.name-info {
+    padding-bottom: 3vh;
+    position: relative;
+    bottom: 3vh;
+    padding-right:0vw;
+    padding-bottom: 1vw;
+    font-size: 1.7vmax;
+    font-family: Assistant;
+    font-weight: 700;
+    color: #052554;
+    
+}
+
+.spec-call:hover {
+    background-color:#ffe4b7ff;
+    cursor: pointer;
+    
+}
+
+.title-chap1-info {
+    color: #396c84;
+    font-family: "aharoni";
+    font-weight: bold;
+    font-size: 1.4vmax;
+    position: relative;
+}
+
+.info-div {
+    /* white-space: nowrap;  */
+    overflow: hidden;
+    text-overflow: clip;
+    margin-top: 1vh;
+    border-top: solid 0px #ffffff;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    overflow-wrap: break-word;
+}
+
+.info-div p {
+    position: relative;
+    right: 2%;
+    bottom: 10%;
+}
+
+.info-text2 {
+    position: relative;
+    margin: 0;
+    transform: translateY(-1vh);
+    font-size: 1.6vmax;
+}
+
+.info-text1 {
+    margin-top: 1vh;
+    font-size: 1.5vmax;
+    width: 90%;
+    margin-right: 1vw;
+    font-weight: 450;
+    color: #052554;
+}
+
+.info-div {
+    height: 0;
+    transition: all .4s;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+
+.first-call {
+    border-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    margin: 0.5vw;
+} 
+
+.down-arrow {
+    position: absolute;
+    width: 2vw;
+    margin-top: -1.5vh;
+    left: 2vw;
+    transition: all .4s;
+}
+
+.long-info {
+    overflow-y: scroll;
+    direction: ltr;
+    top: 10%;
+}
+
+.long-info p {
+    direction: rtl;
+    left: 5%;
+}
+
+#info-text1{
+    margin-top: 8vh;
+}
+
+#info-text6{
+    margin-top: 8vh;
+}
+
+.explenation-text{
+    position: absolute;
+    font-size: 1.9vmax;
+    width: 65vw;
+    color: #052554;
+    text-align: center;
+    right: 17.5vw;
+    top: 18vh;
+}
+
+#timeToEnter{
+    position: absolute;
+    width: 60vw;
+    right: 20vw;
+    top: 33vh;
+}
+
+#findTime{
+    position: relative;
+    filter: drop-shadow(2px 2px #8c8c8c);
+    width: 30vw;
+    cursor: pointer;
+    transition: all .5s;
+    left: 0;
+    right:35vw;
+    top: 83vh;
+}
+
+#findTime:hover{
+    left: 2px;
+    filter: drop-shadow(0px 0px  #8c8c8c);
+}
+
+#soliderSpeech{
+    position: absolute;
+    width:100vw;
+    height: 100vh;
+    top: 35vh;
+    left: 37vw;
+    z-index: 100;
+}
+
+#bubbleSpeech{
+    position: absolute;
+    width: 23vw;
+    top: 32vh;
+    right: 17vw;
+    display: block;
+}
+
+#theMustSafe{
+    position: absolute;
+    width: 10vw;
+    height: 40vh;
+    top: 33vh;
+    right: 48vw;
+}
+
+.mustSafe{
+    position: relative;
+    width: 35vw;
+    height: 10vh;
+    cursor: pointer;
+    z-index: 300;
+}
+
+#chap5-info{
+    top: 38vh;
+    overflow-y: scroll;
+}
+
+#bubbleSpeechPhone{
+    display: none;
+}
+
+#timeToEnterPhone{
+    display: none;
+}
+
+#findTimePhone{
+    display: none;
+}
+
+.beckgroundExplenation{
+    position: absolute;
+    width:100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.212);
+    z-index:799;
+}
+
+#theMustProtected-container{
+    display: none;
+}
+
+#mustProtected-title{
+    position: absolute;
+     color: #052554;
+    font-size: 3vmax;
+    font-weight: 700;
+    top: 5vh;
+    width: 70vw;
+     right: 2.5vw;
+     text-align: center;
+}
+
+#mustProtected-text{
+    width: 70vw;
+    position: absolute;
+    color: #052554;
+    font-size: 2.1vmax;
+    top: 20vh;
+    right: 2.5vw;
+}
+.close-button{
+    font-weight: 700;
+    color: white;
+    background-color: #052554;
+    cursor: pointer;
+    transition: all .5s;
+    left: 0;
+    width: 6vw;
+    border-radius: 3vw;
+    z-index:2000;
+    text-align: center;
+    font-size: 2vmax;
+    height: 5vh;
+    position: absolute;
+    right: 49vw;
+    height: 7vh;
+    top: 80vh;
+}
+
+.close-button:hover{
+    background-color: #b5b5b5;
+}
+
+#theMustProtectedExplenation{
+     position: absolute;
+    width: 75vw;
+    height: 85vh;
+    top:7vh;
+    right: 12.5vw;
+    background-color: #ffffff;
+    border-radius: 0.5vw;
+    box-shadow: 5px 5px rgb(207, 207, 207);
+    z-index: 999;
+    color: #052554;
+    font-size: 2vmax;
+}
+
+
+.white-div-num {
+    position: relative;
+    background-color: #052554;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    right: 3vw;
+    font-size: 3vmax;
+}
+
+#white-div-text1-important{
+    position: relative;
+    font-size: 3.6vmin;
+    font-weight: 400;
+    width: 55vw;
+    text-align: center;
+    right:9vw;
+    top: -14vh;
+    color: #052554;
+}
+
+.move-pages-white-div {
+    width: 90%;
+    position: absolute;
+    right: 5%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    top: 24vh;
+}
+
+.move-pages-white-div-important {
+    width: 90%;
+    position: absolute;
+    right: 5%;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    top: 24vh;
+}
+
+.move-pages-white-div-equip {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    top: 10vh;
+}
+
+
+#white-div-num1-important {
+    opacity: 0;
+}
+
+.page-move-color {
+    color: #8c8c8c;
+   font-size: 2vmax;
+}
+
+.page-move-color b {
+    color: #052554;
+}
+
+.img-info-equip {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    right: 3%;
+    margin: 1vw;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.equipment-img-div {
+    width: 86%;
+    right: 7%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.equipment-img {
+    /* height: 25vh; */
+    width: 32%;
+}
+
+.page-move-color {
+    position: relative;
+    top: 22vh;
+    right: 0vw;
+}
+
+#back-arrow-img1 {
+    opacity: 0;
+    cursor: pointer;
+}
+
+#back-arrow-img2 {
+    opacity: 0;
+    cursor: pointer;
+}
+
+#front-arrow-important{
+    cursor: pointer;
+}
+
+#back-arrow-important{
+        cursor: pointer;
+}
+
+#info8-text{
+    padding-top: 4vh;
+    overflow-y: scroll;
+}
+
+#equipment-img1-2 {
+    position: relative;
+    top: 3vh;
+}
+
+.category-questions1{
+    width: 100vw;
+    position: absolute;
+    color: #052554;
+    font-size: 4vmax;
+    text-align: center;
+    top: 5vh;
+}
+
+.category-questions2{
+    width: 100vw;
+    position: absolute;
+    font-weight: 900;
+    color: #052554;
+    font-size: 4vmax;
+    text-align: center;
+    top: 13vh;
+
+}
+
+@media screen and (max-width: 450px){
+    body{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        background-image: url('../../assets/images/protectedSpace/PinkBackgroundPhone.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        direction: rtl;
+        font-family: Assistant;
+    }
+
+   
+    .backbutton{
+        position: absolute;
+        width: 16vw;
+        height: 4vh;
+        border-radius: 40px;
+        text-align: center;
+        padding: 1vh;
+        font-size: 3vmax;
+        top: 81vh;
+        right: 5vw;
+    }
+
+    #homeIcon{
+        position: absolute;
+        width: 14vw;
+        height: 14vh;
+        top: 77vh;
+        right: 80vw;
+        cursor: pointer;
+    }
+
+    #pkarIcon{
+        position: absolute;
+        width: 12vw;
+        height: 12vh;
+        top: 1vh;
+        right: 24vw;
+    }
+
+    #soliderSpeech{
+        position: absolute;
+        width:45vw;
+        height:52vh;
+        top: 55vh;
+        left: 58vw;
+        z-index: 899;
+    }
+
+    #navbar{
+        position: absolute;
+        width: 57vw;
+        height: 7.5vh;
+        border-radius: 40px;
+        background-color: #dbdbdb;
+        top: 3.3vh;
+        right: 21.5vw;
+    }
+    .icons{
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        width: 35vw;
+        top: 4vh;
+        right: 38vw;
+        background-color: #ffb33c;
+        height: 6vh;
+        border-radius: 40px;
+        padding-left: 2vw;
+        padding-right:2vw;
+    }
+
+    .icon{
+        width:9vw;
+    }
+
+    .icon:hover{
+        opacity: 80%;
+        cursor: pointer;
+    }
+
+    
+    #categories{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90vw; 
+        right: 5vw;
+        top: 23vh;
+        align-items: center;
+    }
+
+    .category{
+        width: 35vw;
+        height: 10vh;
+        margin-bottom:0vh;
+        padding: 0;
+        margin: 1vh;
+    }
+
+    .category:hover{
+        left: 5px;
+        filter: drop-shadow(0px 0px  #8c8c8c);
+    }
+
+    .solider{
+        position: absolute;
+        width:45vw;
+        height:52vh;
+        top: 54vh;
+        left: 58vw;
+    }
+
+
+    .categoryTitle{
+        width: 95vw;
+        position: absolute;
+        font-weight: 900;
+        color: #052554;
+        font-size: 3.5vmax;
+        text-align: center;
+        top: 11vh;
+    }
+
+    .titleIcon{
+        position: relative;
+        width: 8vw;
+        height:8vh;
+        top: 2.5vh;
+        right: -1vw;
+    }
+
+  
+    #bubbleSpeech{
+        display: none;
+    }
+
+
+    #bubbleSpeechPhone{
+        display: block;
+        position: absolute;
+        width:57vw;
+        top:63vh;
+        right: 30vw;
+    }
+
+    #theMustSafe{
+        position: absolute;
+        width: 50vw;
+        height:30vh;
+        top: 37vh;
+        right: 20vw;
+    }
+
+    .mustSafe{
+        position: relative;
+        width: 60vw;
+        height: 4vh;
+    
+    }
+
+    
+    .explenation-text{
+        position: absolute;
+        font-size: 2.4vmax;
+        width:85vw;
+        color: #052554;
+        text-align: center;
+        right: 7.5vw;
+        top: 20vh;
+    }
+
+    #timeToEnter{
+        display: none;
+    }
+
+    #timeToEnterPhone{
+        position: absolute;
+        display: block;
+        width: 86vw;
+        height: 50vh;
+        top: 32vh;
+        right: 7vw;
+    }
+
+    #findTimePhone{
+        position: relative;
+        filter: drop-shadow(2px 2px #8c8c8c);
+        width: 36vw;
+        height: 20vh;
+        cursor: pointer;
+        transition: all .5s;
+        left: 0;
+        right:32vw;
+        top: 73vh;
+        display: block;
+    }
+
+    #findTime{
+        display: none;
+    }
+
+    #findTimePhone:hover{
+    left: 2px;
+    filter: drop-shadow(0px 0px  #8c8c8c);
+}
+
+ .explenation-text{
+        position: absolute;
+        font-size: 2.4vmax;
+        width: 80vw;
+        color: #052554;
+        text-align: center;
+        right: 10vw;
+        top: 21vh;
+    }   
+
+    #explenation-text1{
+        position: absolute;
+        font-size: 2.4vmax;
+        width: 80vw;
+        color: #052554;
+        text-align: center;
+        right: 10vw;
+        top: 25vh;
+    }   
+
+
+    .chap1-info {
+        width: 90vw;
+        right: 5vw;
+        height: 55vh;
+        top: 23vh;
+    }
+
+    .call-title {
+        height: 2.5vh;
+        padding-right: 2vw;
+        padding-left: 9vw;
+
+    }
+
+    .first-call {
+        border-radius: 2vw;
+        border-bottom-right-radius: 2vw;
+        border-bottom-left-radius: 2vw;
+        margin:2vw;
+    } 
+
+    .name-info {
+        padding-bottom: 3vh;
+        position: relative;
+        bottom: 3vh;
+        padding-right: 2vw;
+        padding-bottom: 1vw;
+        font-size: 2.1vmax;
+        font-family: Assistant;
+        font-weight: 700;
+    }
+
+    
+    .info-text1 {
+        margin-top: 1vh;
+        font-size: 2vmax;
+        width: 90%;
+        margin-right: 1vw;
+        font-weight: 450;
+    }
+        
+    .down-arrow {
+        position: absolute;
+        width: 3.5vw;
+        margin-top: -1.8vh;
+        left: 7vw;
+        transition: all .4s;
+    }
+
+    #categoryTitleShort{
+        width:80vw;
+        right: 10vw;
+        top: 10vh;
+    }
+
+    #chap5-info{
+        top: 45vh;
+        height: 35vh;
+    }
+
+    #mustProtected-title{
+    font-size: 4.3vmax;
+    top: 6vh;
+    width: 70vw;
+    }
+
+    #mustProtected-text{
+        width: 66vw;
+        font-size: 2.2vmax;
+        top: 14vh;
+        right: 4vw;
+    }
+
+      .close-button{
+        font-weight: 700;
+        color: white;
+        background-color: #052554;
+        cursor: pointer;
+        transition: all .5s;
+        left: 0;
+        width: 17vw;
+        border-radius: 6vw;
+        z-index:2000;
+        text-align: center;
+        font-size: 2.7vmax;
+        height: 4.5vh;
+        position: absolute;
+        right: 42VW;
+        top: 70vh;
+    }
+
+    
+    #theMustProtectedExplenation{
+        position: absolute;
+        width: 75vw;
+        height: 75vh;
+        top:7vh;
+        right: 12.5vw;
+        background-color: #ffffff;
+        border-radius: 0.5vw;
+        box-shadow: 5px 5px rgb(207, 207, 207);
+        z-index: 999;
+        color: #052554;
+        font-size: 2vmax;
+    }
+
+        .move-pages-white-div-equip {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        height: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        top: 4vh;
+    }
+
+    #page-move-color-equip {
+        position: relative;
+        top:6vh;
+        right: 0vw;
+    }
+
+    .page-move-color{
+        top: 1vh;
+    }
+
+    .img-info-equip {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        right: 3%;
+        margin: 1vw;
+        margin-top: 3vh;
+        margin-bottom: 4vh;
+    }
+
+    
+    #white-div-text1-important{
+        position: relative;
+        font-size: 4.7vmin;
+        font-weight: 400;
+        width: 55vw;
+        text-align: center;
+        right:6vw;
+        top: -11vh;
+        color: #052554;
+    }
+
+    .move-pages-white-div-important {
+        width: 80%;
+        position: absolute;
+        right: 10%;
+        height: 7vh;
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        top: 34vh;
+    }
+
+    #front-arrow-important{
+       width: 7vw; 
+    }
+
+     #back-arrow-important{
+       width: 7vw; 
+    }
+
+    .category-questions1{
+        width: 100vw;
+        position: absolute;
+        color: #052554;
+        font-size: 3.6vmax;
+        text-align: center;
+        top: 13vh;
+    }
+
+    .category-questions2{
+        width: 100vw;
+        position: absolute;
+        font-weight: 900;
+        color: #052554;
+        font-size: 3.6vmax;
+        text-align: center;
+        top: 17vh;
+
+    }
+
+
+}

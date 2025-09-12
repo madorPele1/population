@@ -362,7 +362,7 @@ body{
 
 .bubbleSpeech{
     position: absolute;
-    width:72vw;
+    width:77vw;
     height: 55vh;
     top: 28vh;
     right: 22vw;
@@ -372,10 +372,10 @@ body{
     position: absolute;
     font-weight: 400;
     color: #052554;
-    width:54vw;
+    width:60vw;
     height: 50vh;
     text-align: center;
-    font-size: 1.9vmax;
+    font-size: 2vmax;
     top: 48.5vh;
     right: 30vw;
 }

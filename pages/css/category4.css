@@ -1032,12 +1032,12 @@ body{
   
     #white-div-text1-safe{
         position: relative;
-        font-size: 4vmin;
+        font-size: 4.1vmin;
         font-weight: 400;
-        width: 60vw;
+        width: 75vw;
         text-align: center;
-        right:11vw;
-        top: -5vh;
+        right:7.5vw;
+        top: -4vh;
         color: #052554;
     }
 
@@ -1112,7 +1112,8 @@ body{
 
 #text2{
     right:4vw;
-    font-size: 2.2vmax;
+    font-size: 2.1vmax;
+    top: -1vh;
 }
 
 
@@ -1395,4 +1396,40 @@ body{
     top: 13vh;
 }
 
+#explenation-text-safety-arrivel{
+    font-size: 2.2vmax;
+    top:19vh;
+    width: 90vw;
+    right: 5vw;
+}
+
+#explenation-text-safety-arrivel-bold{
+    font-size: 2.1vmax;
+    top:40vh;
+    width: 90vw;
+    right: 5vw;
+}
+
+#white-div-safe-arrivel{
+    width: 86vw;
+    height: 27vh;
+    top: 53vh;
+    right: 7VW;
+}
+
+#move-pages-white-div-safe-arrivel{
+    top: 21vh;
+}
+
+#white-div-num1-safe{
+    top: -1.3vh;
+}
+
+#back-arrow-safe{
+    width: 7vw;
+}
+
+#front-arrow-safe{
+    width: 7vw;
+}
 }

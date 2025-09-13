@@ -22,7 +22,7 @@ body{
     width: 12vw;
     height: 12vh;
     top: 4vh;
-    z-index: 3;
+    z-index: 2;
 }
 
 #homeIcon{
@@ -55,7 +55,7 @@ body{
     top: 0;
     left: 0;
     z-index: 2;
-    background-image: url('/assets/images/coping/PurpleBackground.png');
+    background-image: url('../../assets/images/coping/PurpleBackground.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -99,6 +99,7 @@ body{
 .icon{
     width:6vw;
     height: 6vh;
+    transition: all .3s;
 }
 
 .icon:hover{
@@ -940,7 +941,8 @@ li{
     top: 10vh;
     width: 50vw;
     left: 25%;
-    top: 20%;
+    top: 20vh;
+    z-index: 5;
 }
 
 #fin-table table {
@@ -982,44 +984,73 @@ li{
  border-bottom-left-radius: 1vw;
 }
 
+.button-emg-table {
+    position: relative;
+    width: 6vw;
+    height: 8vh;
+    border: none;
+    border-radius: 40px;
+    text-align: center;
+    padding: 1vh;
+    font-size: 1.8vmax;
+    bottom: 130%;
+    right: 90%;
+    display: none;
+}
+
+.button-emg-ques {
+    position: absolute;
+    width: 12vw;
+    height: 6vh;
+    border: none;
+    border-radius: 40px;
+    text-align: center;
+    padding: 1vh;
+    font-size: 1.5vmax;
+    bottom: 37%;
+    left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: none;
+}
+
+.emg-table-icons {
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        display: none;
+        width: 9vw;
+        bottom: 27%;
+        left: 0;
+        background-color: #91d4ff;
+        height: 7vh;
+        padding-top: 1vh;
+        border-radius: 40px;
+        padding-left: 2vw;
+        padding-right: 1vw;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+
+}
+
+
 @media print {
   body {
     visibility: hidden;
   }
 
-  #printOnly, #printOnly * {
+  .printOnly, .printOnly * {
     visibility: visible;
   }
 
-  #printOnly {
+  .printOnly {
     position: absolute;
+    width: 100vw;
+    height: 90vh;
+    font-size: 2vmax;
     top: 0;
     left: 0;
   }
-}
-
-.category-questions1{
-    width: 100vw;
-    position: absolute;
-    color: #052554;
-    font-size: 4vmax;
-    text-align: center;
-    top: 5vh;
-}
-
-.category-questions2{
-    width: 100vw;
-    position: absolute;
-    font-weight: 900;
-    color: #052554;
-    font-size: 4vmax;
-    text-align: center;
-    top: 13vh;
-
-}
-
-.higher{
-    top: 24vh;
 }
 
 
@@ -1044,7 +1075,6 @@ li{
         height: 12vh;
         top: 1vh;
         right: 24vw;
-        z-index: 333;
     }
 
 
@@ -1206,7 +1236,7 @@ li{
     border-radius: 2vw;
     color: #052554;
     font-weight: 600;
-    top: 55vh;
+    top: 57vh;
     right: 2.5vw;
     box-shadow: 4px 4px #dbdbdb;
 }
@@ -1249,7 +1279,7 @@ li{
 
 .explenation-text{
     position: absolute;
-    font-size: 2.2vmax;
+    font-size: 2.4vmax;
     width:85vw;
     color: #052554;
     text-align: center;
@@ -1261,21 +1291,21 @@ li{
     position: relative;
     margin-right: 1.3vw;
     margin-bottom:2vh;
-    width: 60vw;
+    width: 70vw;
     height: 4vh;
     background-color: #176598;
     border-radius: 1vw;
     text-align: center;
     color: #ffffff;
     font-weight: 700;
-    font-size: 2vmax;
+    font-size: 2.2vmax;
     padding-top: 1vh;
     cursor: pointer;
     box-shadow: 4px 4px rgb(207, 207, 207);
     transition: all .5s;
     left: 0;
-    top: 74vh;
-    right: 20vw;
+    top: 78vh;
+    right: 15vw;
 }
 
 #importancePhoneList-div{
@@ -1316,7 +1346,7 @@ li{
         bottom: 3vh;
         padding-right: 2vw;
         padding-bottom: 1vw;
-        font-size: 2vmax;
+        font-size: 2.5vmax;
         font-family: Assistant;
         font-weight: 700;
         
@@ -1341,8 +1371,7 @@ li{
 
     
     #chap5-info{
-        top: 34vh;
-        height: 45vh;
+        top: 36vh;
         overflow-y: scroll;
     }
 
@@ -1350,11 +1379,11 @@ li{
     #emphasisCoping-continer{
         position: absolute;
         width: 95vw;
-        height: 37vh;
+        height: 40vh;
         display: flex;
         flex-flow: row wrap;
         right: 2.5vw;
-        top: 36vh;
+        top: 39vh;
     
     }
 
@@ -1387,78 +1416,9 @@ li{
 
 #emphasis-text{
     width: 70vw;
-    font-size: 2vmax;
+    font-size: 2.1vmax;
     top: 17vh;
 }
 
-  .category-questions1{
-        width: 100vw;
-        position: absolute;
-        color: #052554;
-        font-size: 3.6vmax;
-        text-align: center;
-        top: 13vh;
-    }
-
-    .category-questions2{
-        width: 100vw;
-        position: absolute;
-        font-weight: 900;
-        color: #052554;
-        font-size: 3.6vmax;
-        text-align: center;
-        top: 17vh;
-
-    }
-
-    .higher{
-        top: 23vh;
-        height: 56vh;
-    }
-
-#white-div-prep{
-    height: 44vh;
-    width: 90vw;
-    top: 36vh;
-    right: 5vw;
-}
-
-#white-div-text1-prep{
-     width: 85vw;
-     right: 2vw;
-     top: -3vh;
-     font-size: 1.9vmax;
-}
-
-#movePages-prep{
-    top: 37vh;
-}
-
-#back-arrow-prep{
-    width: 8vw;
-}
-
-#front-arrow-prep{
-width: 8vw;
-}
-
-
-.white-div-num {
-    background-color: #052554;
-    width:7vw;
-    height:7vw;
-    border-radius: 100%;
-    text-align: center;
-    right: 3vw;
-    font-size: 2.4vmax;
-    top: -1vh;
-}
-
-#build-emergency-plain{
-    width: 50vw;
-    top: 52vh;
-    font-size: 2.1vmax;
-    right: 25vw;
-}
 }
 

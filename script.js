@@ -10,14 +10,14 @@ let safeArrivalCounter;
 var imgCounter1;
 var imgCounter2;
 let emergencyCounter;
-let emergencyAns1;
-let emergencyAns2;
-let emergencyAns3;
-let emergencyAns4;
-let emergencyAns5;
-let emergencyAns6 = ["", "", ""];
-let emergencyAns7 = ["", "", ""];
-let emergencyAns8 = ["", ""];
+var emergencyAns1;
+var emergencyAns2;
+var emergencyAns3;
+var emergencyAns4;
+var emergencyAns5;
+var emergencyAns6 = ["", "", ""];
+var emergencyAns7 = ["", "", ""];
+var emergencyAns8 = [];
 const CIRCLE_TEXT = ["מיידי", "15 שניות", "30 שניות", "45 שניות", "דקה", "דקה וחצי"];
 const SAFE_ARRIVAL = ["בדקו ביחד עם האדם המבוגר כמה זמן עומד לרשותו כדי להיכנס למרחב המוגן ובחרו עימו את המרחב המוגן בהתאם.", "חשוב לתכנן מראש את נתיב ההגעה למרחב המוגן ולפנות את הדרך אליו ממכשורלים שעלולים להפריע לתנועה, כמו נפילות ופציעות. תרגלו ביחד, אם הדבר אפשרי, את ההגעה למרחב המוגן בזמן.", "אם המרחב המוגן של האדם המבוגר הוא חדר המדרגות,והכינו מראש כיסא מתאים בחדר המדרגות.", 
     '<b>אם קיים קושי בניידות (אדם הנעזר בכיסא גלגלים או בהליכון ומרותקי מיטה) -</b><br>דאגו להכין מיטה בממ"ד או בחדר פנימי והצמידו אותה לקיר פנימי, מתחת לקו חלונות ולא מול הדלת. וודאו שלא מותקנים מעל למיטה מדפים וחפצים שעלולים ליפול עליו.', `<b>אם קיים קושי לעבור מישיבה על ספה לכיסא גלגלים בזמן קצר- </b><br>הצמידו את הספה לקיר פנימי, מתחת לקו חלונות ולא מול הדלת.
@@ -143,7 +143,9 @@ window.addEventListener('load', () => {
         for (i=0; i<buttonEmergency.length; i++) {
             buttonEmergency[i].addEventListener("click", buttonEmergencyManager);
         };
-        
+        for (i=0; i<=8; i++) {
+            console.log(`ans${i}: ${window['emergencyAns' + i]}`);
+        }
 
     }
 });
@@ -708,7 +710,7 @@ const buttonEmergencyManager = (event) => {
             event.target.style.backgroundColor = "#176598";
             if (emergencyAns8.includes(event.target.innerText)) {
                 let index = emergencyAns8.indexOf(event.target.innerText);
-                emergencyAns8[0] = [...array.slice(0, index), ...array.slice(index + 1)];
+                emergencyAns8 = [...emergencyAns8.slice(0, index), ...emergencyAns8.slice(index + 1)];
             };
         } else {
             event.target.style.backgroundColor = "#052554";
@@ -716,11 +718,34 @@ const buttonEmergencyManager = (event) => {
             
         }
     }
-    console.log(emergencyAns8);
+            for (i=0; i<=8; i++) {
+            console.log(`ans${i}: ${window['emergencyAns' + i]}`);
+        }
+    checkEmgInfo();
+}
+
+const checkEmgInfo = () => {
+    if (emergencyAns1 === undefined || emergencyAns3 === undefined || emergencyAns4 === undefined || emergencyAns5 === undefined || emergencyAns6 == ",," || emergencyAns7 == ",," || emergencyAns8 == "") {
+        document.getElementById("go-to-emg-table").style.display = "none";
+    } else {
+        document.getElementById("go-to-emg-table").style.display = "block";
+    };
+    console.log("works");
 }
 
 const addContact = (event) => {
     let clickedContact = event.target.id.replace(/\D/g, "");
     event.target.disabled = true;
     emergencyAns7[clickedContact - 1] = document.getElementById(`contact-name${clickedContact}`).value + "-"+ document.getElementById(`phoneNumber${clickedContact}`).value+ `<br>`;
+}
+
+const emgTable = () => {
+    for (i=1; i<=8; i++) {
+        document.getElementById(`emg-ans${i}-td`).innerHTML = window['emergencyAns' + i]; 
+        console.log(`ans${i}: ${window['emergencyAns' + i]}`);
+    }
+    document.getElementById(`fin-table`).style.display = "block";
+    document.getElementById(`go-to-emg-ques`).style.display = "block";
+    document.getElementById(`emg-table-icons`).style.display = "flex";
+    document.getElementById(`white-div-emergency`).style.display = "none";
 }

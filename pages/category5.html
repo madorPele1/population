@@ -150,55 +150,9 @@
              <div class="makePhoneList" onclick="{document.getElementById('importancePhoneList').style.display='block'}">חשיבות הכנת רשימת טלפונים</div>
              
         </div>
-        <div id="category5-page" class="page5">  <div class="category-questions1">שאלות נפוצות</div>
-          <div class="category-questions2">היערכות לחירום</div>
-          <div class="chap1-info higher" id="chap1-info">
-            <div class="spec-call first-call" id="call8">
-                <div class="call-title"><span class="name-info" id="name8">למה חשוב להתכונן בשגרה למצבי חירום?</span><img src="../assets/images/arrowdown.svg" alt="down-arrow" class="down-arrow" id="down-arrow1"></div>
-                <div class="info-div" id="info8">
-                    <p class="info-text1"></p>
-                </div>
-            </div>
-             <div class="spec-call first-call" id="call9">
-                <div class="call-title"><span class="name-info" id="name9">אני סובל מתחושות של מתח ולחץ, אך חושש לחלוק אותן עם משפחתי ולהיראות חלש. מה לעשות?</span><img src="../assets/images/arrowdown.svg" alt="down-arrow" class="down-arrow" id="down-arrow1"></div>
-                <div class="info-div" id="info9">
-                    <p class="info-text1"></p>
-                </div>
-            </div>
-             <div class="spec-call first-call" id="call10">
-                <div class="call-title"><span class="name-info" id="name10">אלו מצבי חירום מחייבים הצטיידות מראש?</span><img src="../assets/images/arrowdown.svg" alt="down-arrow" class="down-arrow" id="down-arrow1"></div>
-                <div class="info-div" id="info10">
-                    <p class="info-text1"> </p>
-                </div>
-            </div>
-             <div class="spec-call first-call" id="call11">
-                <div class="call-title"><span class="name-info" id="name11">כיצד מונעים היווצרות מוקדי סיכון בבית?</span><img src="../assets/images/arrowdown.svg" alt="down-arrow" class="down-arrow" id="down-arrow1"></div>
-                <div class="info-div" id="info11">
-                    <p class="info-text1"> </p>
-                </div>
-            </div>
-             <div class="spec-call first-call" id="call12">
-                <div class="call-title"><span class="name-info" id="name12">מה הפעולה הראשונה שיש לבצע בהכנת הבית לחירום?</span><img src="../assets/images/arrowdown.svg" alt="down-arrow" class="down-arrow" id="down-arrow1"></div>
-                <div class="info-div" id="info12">
-                    <p class="info-text1"> </p>
-                </div>
-            </div>
-             <div class="spec-call first-call" id="call13">
-                <div class="call-title"><span class="name-info" id="name13">האם ניתן לאחסן ציוד בממ"ד?</span><img src="../assets/images/arrowdown.svg" alt="down-arrow" class="down-arrow" id="down-arrow1"></div>
-                <div class="info-div" id="info13">
-                    <p class="info-text1"> </p>
-                </div>
-            </div>
-             <div class="spec-call first-call" id="call14">
-                <div class="call-title"><span class="name-info" id="name14">איך מאחסנים ציוד לשעת חירום?</span><img src="../assets/images/arrowdown.svg" alt="down-arrow" class="down-arrow" id="down-arrow1"></div>
-                <div class="info-div" id="info14">
-                    <p class="info-text1"> </p>
-                </div>
-            </div>
-        </div>
-    </div>
+        <div id="category5-page" class="page5"></div>
 
-        <div id="emergency-plan"  >
+        <div id="emergency-plan">
             <div id="start-page">
                 <img id="soliderSpeech" src="../assets/images/soliderSpeech.svg" alt="soliderSpeech">
                 <div id="startTitle" class="headline">בניית תכנית חירום אישית</div>
@@ -238,23 +192,23 @@
 
                         <div id="div-4-emergency">
                             <p id="white-div-text1-prep"><b>האם אני נדרש בציוד נוסף בהתאם למחלה/ <br> צרכים מיוחדים שיש לי?</b><br></p>
-                            <input oninput="emergencyAns4 = document.getElementById(`emergency4-ans`).value;" id="emergency4-ans" name="emergency4-ans" rows="4" cols="50">    
+                            <input oninput="emergencyAns4 = document.getElementById(`emergency4-ans`).value; checkEmgInfo()" id="emergency4-ans" name="emergency4-ans" rows="4" cols="50">    
                         </div>
 
                         <div id="div-5-emergency">
                             <p id="white-div-text1-prep"><b>מה הפעולות היומיומיות שנצטרך לזכור במצבי חירום</b><br></p>
-                            <input oninput="emergencyAns5 = document.getElementById(`emergency5-ans`).value;" id="emergency5-ans" name="emergency5-ans" rows="4" cols="50">    
+                            <input oninput="emergencyAns5 = document.getElementById(`emergency5-ans`).value; checkEmgInfo()" id="emergency5-ans" name="emergency5-ans" rows="4" cols="50">    
                         </div>
                         
                         <div id="div-6-emergency">
                             <p id="white-div-text1-prep"><b>כתיבת הסבר מדויק למה אני צריך ומה מצבי עבור גורמי חירום</b><br></p>
                             <div class="form-emeregency6">
                                 <label for="fname">אני סובל מקושי שנגרם כתוצאה מ...</label><br>
-                                <input type="text" id="emergency6-hardness" name="fname" oninput="emergencyAns6[0] = document.getElementById(`emergency6-hardness`).value;"><br>
+                                <input type="text" id="emergency6-hardness" name="fname" oninput="emergencyAns6[0] = document.getElementById(`emergency6-hardness`).value; checkEmgInfo()"><br>
                                 <label for="lname">בעקבות מצבי יש לי בעיה ב-....</label><br>
-                                <input type="text" id="emergency6-problem" name="lname" oninput="emergencyAns6[1] = document.getElementById(`emergency6-problem`).value;"><br>
+                                <input type="text" id="emergency6-problem" name="lname" oninput="emergencyAns6[1] = document.getElementById(`emergency6-problem`).value; checkEmgInfo()"><br>
                                 <label for="lname">על מנת שאתמודד איתה אני זקוק ל…</label><br>
-                                <input type="text" id="emergency6-need" name="lname" oninput="emergencyAns6[2] = document.getElementById(`emergency6-need`).value;"><br><br>
+                                <input type="text" id="emergency6-need" name="lname" oninput="emergencyAns6[2] = document.getElementById(`emergency6-need`).value; checkEmgInfo()"><br><br>
                                 <button>אישור</button>
                             </div>
                         </div>
@@ -284,60 +238,65 @@
                             <p id="white-div-text1-prep"><b>בחירת פעולות שעוזרות לי להירגע בשעת הצורך</b><br></p>
                             <div class="emergency8-container">
                                 <div class="button-div-emergency8">
-                                    <button type="button" class="button-emergency" id="button-emergency11" onclick="window.print();">מוזיקה</button>
+                                    <button type="button" class="button-emergency" id="button-emergency11">מוזיקה</button>
                                     <button type="button" class="button-emergency" id="button-emergency12">לדבר עם קרוב</button>
                                     <button type="button" class="button-emergency" id="button-emergency13">לנשום עמוק</button>
                                 </div>
                                 <label for="fname">מלל חופשי:</label><br>
-                                <input type="text" id="emergency8-input" name="fname" oninput="emergencyAns8[1] = document.getElementById(`emergency8-input`).value;"><br>
+                                <input type="text" id="emergency8-input" name="fname" oninput="emergencyAns8[1] = document.getElementById(`emergency8-input`).value; checkEmgInfo()"><br>
                             </div>  
                         </div>
 
+                        <button id="go-to-emg-table" class="button-emg-table button" onclick="emgTable()">אישור</button>
                         <div class="move-pages-white-div" id="movePages-emergency">
                             <img src="../assets/images/white-div-arrow-back.svg" alt="arrow-down" class="arrow-move" id="back-arrow-emergency"/>
                             <p id="page-move-color-emergency" class="page-move-color"><b>●</b>●●●●●●●</p>
                             <img src="../assets/images/white-div-arrow.svg" alt="arrow-down" class="arrow-move" id="front-arrow-emergency"/>
                         </div>
-                    </div>
 
-                    <div id="fin-table">
-                        <table>
-                            <tr>
-                                <th>במקרה הצורך, אני מקבל התרעות דרך:</th>
-                                <th>Contact</th>
-                            </tr>
-                            <tr>
-                                <td>זמן ההתגוננות שלי הוא:</td>
-                                <td>Maria Anders</td>
-                            </tr>
-                            <tr>
-                                <td>המרחב המוגן הקרוב אליי:</td>
-                                <td>Francisco Chang</td>
-                            </tr>
-                            <tr>
-                                <td>ציוד נוסף שאני זקוק לו במרחב המוגן:</td>
-                                <td>Roland Mendel</td>
-                            </tr>
-                            <tr>
-                                <td>מה הפעולות שנעשה במצב חירום:</td>
-                                <td>Helen Bennett</td>
-                            </tr>
-                            <tr>
-                                <td>הסבר צרכים לגורמי החירום:</td>
-                                <td>Yoshi Tannamuri</td>
-                            </tr>
-                            <tr>
-                                <td>בחירת פעולות שעוזרות לי להירגע בשעת צורך:</td>
-                                <td>Giovanni Rovelli</td>
-                            </tr>
-                            <tr>
-                                <td>אנשי הקשר שלי לחירום:</td>
-                                <td>Giovanni Rovelli</td>
-                            </tr>
-                        </table>
                     </div>
+                    <div class="emg-table-icons" id="emg-table-icons">
+                        <img class="icon" id="print-table" src="../assets/images/print-icon.svg" alt="print" onclick="window.print();">
+                        <img class="icon" id="save-table" src="../assets/images/save-icon.svg" alt="save">
+                    </div>
+                    <button id="go-to-emg-ques" class="button-emg-ques button" onclick='document.getElementById(`fin-table`).style.display = "none"; document.getElementById(`emg-table-icons`).style.display = "none"; document.getElementById(`go-to-emg-ques`).style.display = "none"; document.getElementById(`white-div-emergency`).style.display = "block";'>שינוי טבלה</button>
             </div>
         </div>
-
+        <div id="fin-table" class="printOnly">
+            <table>
+                <tr>
+                    <th>במקרה הצורך, אני מקבל התרעות דרך:</th>
+                    <th id="emg-ans1-td">Contact</th>
+                </tr>
+                <tr>
+                    <td>זמן ההתגוננות שלי הוא:</td>
+                    <td id="emg-ans2-td">Maria Anders</td>
+                </tr>
+                <tr>
+                    <td>המרחב המוגן הקרוב אליי:</td>
+                    <td id="emg-ans3-td">Francisco Chang</td>
+                </tr>
+                <tr>
+                    <td>ציוד נוסף שאני זקוק לו במרחב המוגן:</td>
+                    <td id="emg-ans4-td">Roland Mendel</td>
+                </tr>
+                <tr>
+                    <td>מה הפעולות שנעשה במצב חירום:</td>
+                    <td id="emg-ans5-td">Helen Bennett</td>
+                </tr>
+                <tr>
+                    <td>הסבר צרכים לגורמי החירום:</td>
+                    <td id="emg-ans6-td">Yoshi Tannamuri</td>
+                </tr>
+                <tr>
+                    <td>בחירת פעולות שעוזרות לי להירגע בשעת צורך:</td>
+                    <td id="emg-ans7-td">Giovanni Rovelli</td>
+                </tr>
+                <tr>
+                    <td>אנשי הקשר שלי לחירום:</td>
+                    <td id="emg-ans8-td">Giovanni Rovelli</td>
+                </tr>
+            </table>
+        </div>
 </body>
 </html>

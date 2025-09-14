@@ -1,4 +1,4 @@
-body{
+body {
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -13,34 +13,34 @@ body{
 }
 
 @font-face {
-    font-family:Assistant;
+    font-family: Assistant;
     src: url(../../assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
 }
 
 
-#pkarIcon{
+#pkarIcon {
     position: absolute;
     width: 12vw;
     height: 12vh;
     top: 4vh;
 }
 
-#homeIcon{
+#homeIcon {
     position: absolute;
     width: 12vw;
     height: 12vh;
     top: 83vh;
     right: 88vw;
     cursor: pointer;
-   z-index: 300;
+    z-index: 300;
 }
 
-#homeIcon:hover{
-  cursor: pointer;
+#homeIcon:hover {
+    cursor: pointer;
 }
 
 
-#navbar{
+#navbar {
     position: absolute;
     width: 15vw;
     height: 9vh;
@@ -50,7 +50,8 @@ body{
     top: 3.5vh;
     right: 85vw;
 }
-.icons{
+
+.icons {
     position: absolute;
     display: flex;
     justify-content: space-around;
@@ -61,44 +62,45 @@ body{
     z-index: 300;
 }
 
-.icon{
-    width:6vw;
+.icon {
+    width: 6vw;
     height: 6vh;
 }
 
-.icon:hover{
+.icon:hover {
     opacity: 80%;
     cursor: pointer;
 }
-#categories{
+
+#categories {
     display: flex;
     flex-flow: row wrap;
-    justify-content:center;
+    justify-content: center;
     width: 45vw;
     height: 40vh;
     position: absolute;
     top: 23vh;
     right: 27.5vw;
- 
+
 }
 
-.category{
+.category {
     position: relative;
     width: 35vh;
-    height:19vh;
-    filter: drop-shadow(5px 5px  #8c8c8c7a);
+    height: 19vh;
+    filter: drop-shadow(5px 5px #8c8c8c7a);
     transition: all .5s;
     left: 0;
     cursor: pointer;
     margin: 0.8vw;
 }
 
-.category:hover{
+.category:hover {
     left: 5px;
-    filter: drop-shadow(0px 0px  #8c8c8c);
+    filter: drop-shadow(0px 0px #8c8c8c);
 }
 
-.categoryTitle{
+.categoryTitle {
     width: 95vw;
     position: absolute;
     font-weight: 900;
@@ -108,7 +110,7 @@ body{
     top: 5vh;
 }
 
-.titleIcon{
+.titleIcon {
     position: relative;
     width: 10vw;
     height: 10vh;
@@ -116,10 +118,10 @@ body{
     right: 2vw;
 }
 
-.solider{
+.solider {
     display: block;
     position: absolute;
-    width:100vw;
+    width: 100vw;
     height: 100vh;
     top: 32vh;
     left: 37vw;
@@ -141,7 +143,7 @@ body{
     display: none;
 }
 
-#main-page1{
+#main-page1 {
     display: block;
 }
 
@@ -149,7 +151,7 @@ body{
     display: none;
 }
 
-.button{
+.button {
     font-weight: 700;
     color: white;
     background-color: #052554;
@@ -159,12 +161,12 @@ body{
     left: 0;
 }
 
-.button:hover{
-     background-color: #b5b5b5;
-      box-shadow: 0px 0px #8c8c8c;
+.button:hover {
+    background-color: #b5b5b5;
+    box-shadow: 0px 0px #8c8c8c;
 }
 
-.backbutton{
+.backbutton {
     position: absolute;
     width: 7vw;
     height: 8vh;
@@ -210,18 +212,18 @@ body{
     position: relative;
     bottom: 3vh;
     padding-right: 6vw;
-     padding-bottom: 1vw;
+    padding-bottom: 1vw;
     font-size: 2vmax;
     font-family: Assistant;
     font-weight: 500;
     color: #052554;
-    
+
 }
 
 .spec-call:hover {
-    background-color:#ffe4b7ff;
+    background-color: #ffe4b7ff;
     cursor: pointer;
-    
+
 }
 
 .title-chap1-info {
@@ -289,7 +291,7 @@ body{
     border-bottom-right-radius: 1vw;
     border-bottom-left-radius: 1vw;
     margin: 0.5vw;
-} 
+}
 
 .down-arrow {
     position: absolute;
@@ -310,15 +312,15 @@ body{
     left: 5%;
 }
 
-#info-text1{
+#info-text1 {
     margin-top: 8vh;
 }
 
-#info-text6{
+#info-text6 {
     margin-top: 8vh;
 }
 
-.explenation-text{
+.explenation-text {
     position: absolute;
     font-size: 1.9vmax;
     width: 60vw;
@@ -334,14 +336,14 @@ body{
     margin-top: -5.4vh;
     right: 2vw;
     transition: all .4s;
-    
+
 }
 
-#computer{
-     width:6vw;
+#computer {
+    width: 6vw;
 }
 
-.category-questions1{
+.category-questions1 {
     width: 100vw;
     position: absolute;
     color: #052554;
@@ -350,7 +352,7 @@ body{
     top: 5vh;
 }
 
-.category-questions2{
+.category-questions2 {
     width: 100vw;
     position: absolute;
     font-weight: 900;
@@ -361,7 +363,7 @@ body{
 
 }
 
-#chap2-info{
+#chap2-info {
     width: 60vw;
     position: absolute;
     right: 20vw;
@@ -373,7 +375,7 @@ body{
 }
 
 .call-title1 {
-    height:4vh;
+    height: 4vh;
     color: #2f3043;
     padding-right: 2vw;
 }
@@ -382,17 +384,17 @@ body{
     padding-bottom: 3vh;
     position: relative;
     bottom: 3vh;
-    padding-right:0vw;
+    padding-right: 0vw;
     padding-bottom: 1vw;
     font-size: 1.7vmax;
     font-family: Assistant;
     font-weight: 700;
     color: #052554;
-    
+
 }
 
-@media screen and (max-width: 450px){
-    body{
+@media screen and (max-width: 450px) {
+    body {
         width: 100vw;
         height: 100vh;
         margin: 0;
@@ -407,7 +409,7 @@ body{
     }
 
 
-    #pkarIcon{
+    #pkarIcon {
         position: absolute;
         width: 12vw;
         height: 12vh;
@@ -415,8 +417,8 @@ body{
         right: 24vw;
     }
 
- 
-    .backbutton{
+
+    .backbutton {
         position: absolute;
         width: 16vw;
         height: 4vh;
@@ -428,7 +430,7 @@ body{
         right: 5vw;
     }
 
-    #homeIcon{
+    #homeIcon {
         position: absolute;
         width: 14vw;
         height: 14vh;
@@ -438,15 +440,15 @@ body{
     }
 
 
-    #soliderSpeech{
+    #soliderSpeech {
         position: absolute;
-        width:52vw;
-        height:52vh;
+        width: 52vw;
+        height: 52vh;
         top: 54vh;
         left: 53vw;
     }
 
-    #navbar{
+    #navbar {
         position: absolute;
         width: 57vw;
         height: 7.5vh;
@@ -455,7 +457,8 @@ body{
         top: 3.3vh;
         right: 21.5vw;
     }
-    .icons{
+
+    .icons {
         position: absolute;
         display: flex;
         justify-content: space-around;
@@ -466,67 +469,67 @@ body{
         height: 6vh;
         border-radius: 40px;
         padding-left: 2vw;
-        padding-right:2vw;
+        padding-right: 2vw;
     }
 
-    .icon{
-        width:9vw;
+    .icon {
+        width: 9vw;
     }
 
-    .icon:hover{
+    .icon:hover {
         opacity: 80%;
         cursor: pointer;
     }
 
-    
-    #categories{
+
+    #categories {
         display: flex;
         flex-wrap: wrap;
-        width: 90vw; 
+        width: 90vw;
         right: 5vw;
         top: 23vh;
         align-items: center;
         height: 28vh;
     }
 
-    .category{
+    .category {
         width: 35vw;
         height: 13vh;
-        margin-bottom:0;
+        margin-bottom: 0;
         padding: 0;
         margin: 1vh;
     }
 
-    .category:hover{
+    .category:hover {
         left: 5px;
-        filter: drop-shadow(0px 0px  #8c8c8c);
+        filter: drop-shadow(0px 0px #8c8c8c);
     }
 
-  .solider{
+    .solider {
         position: absolute;
-        width:45vw;
-        height:52vh;
+        width: 45vw;
+        height: 52vh;
         top: 54vh;
         left: 58vw;
     }
 
-.categoryTitle{
-    width: 95vw;
-    position: absolute;
-    font-weight: 900;
-    color: #052554;
-    font-size: 3.5vmax;
-    text-align: center;
-    top: 10vh;
-}
+    .categoryTitle {
+        width: 95vw;
+        position: absolute;
+        font-weight: 900;
+        color: #052554;
+        font-size: 3.5vmax;
+        text-align: center;
+        top: 10vh;
+    }
 
-.titleIcon{
-    position: relative;
-    width: 8vw;
-    height:8vh;
-    top: 2.5vh;
-    right: -1vw;
-}
+    .titleIcon {
+        position: relative;
+        width: 8vw;
+        height: 8vh;
+        top: 2.5vh;
+        right: -1vw;
+    }
 
     .chap1-info {
         width: 90vw;
@@ -538,15 +541,15 @@ body{
     .call-title {
         height: 2.5vh;
         padding-right: 2.8vw;
-        padding-bottom:0vw ;
+        padding-bottom: 0vw;
     }
 
     .first-call {
-    border-radius: 2vw;
-    border-bottom-right-radius: 2vw;
-    border-bottom-left-radius: 2vw;
-    margin:2vw;
-    } 
+        border-radius: 2vw;
+        border-bottom-right-radius: 2vw;
+        border-bottom-left-radius: 2vw;
+        margin: 2vw;
+    }
 
     .name-info {
         position: relative;
@@ -556,10 +559,10 @@ body{
         font-size: 2.1vmax;
         font-family: Assistant;
         font-weight: 700;
-        
+
     }
 
-    
+
     .info-text1 {
         margin-top: 1vh;
         font-size: 2.5vmax;
@@ -567,7 +570,7 @@ body{
         margin-right: 1vw;
         font-weight: 450;
     }
-        
+
     .down-arrow {
         position: absolute;
         width: 3.5vw;
@@ -576,18 +579,18 @@ body{
         transition: all .4s;
     }
 
-      .explenation-text{
+    .explenation-text {
         position: absolute;
         font-size: 2.4vmax;
-        width:85vw;
+        width: 85vw;
         color: #052554;
         text-align: center;
         right: 7.5vw;
         top: 25.3vh;
     }
 
-    
-    .categoryTitle{
+
+    .categoryTitle {
         width: 70vw;
         position: absolute;
         font-weight: 900;
@@ -599,51 +602,51 @@ body{
     }
 
     .alarmDevicePhoto {
-    position: absolute;
-    width: 9vw;
-    margin-top: -4vh;
-    right: 5vw;
-    transition: all .4s;
-    
-}
+        position: absolute;
+        width: 9vw;
+        margin-top: -4vh;
+        right: 5vw;
+        transition: all .4s;
+
+    }
 
 
-#computer{
-     width:14vw;
-     right:3vw;
-}
+    #computer {
+        width: 14vw;
+        right: 3vw;
+    }
 
-.spec-call {
-    padding-top: 7vh;
-    padding-bottom: 0vh;
-}
+    .spec-call {
+        padding-top: 7vh;
+        padding-bottom: 0vh;
+    }
 
-.spec-call1{
-    padding-top: 4vh;
-    padding-bottom: 0vh;
-}
+    .spec-call1 {
+        padding-top: 4vh;
+        padding-bottom: 0vh;
+    }
 
-.category-questions1{
-    width: 100vw;
-    position: absolute;
-    color: #052554;
-    font-size: 3.6vmax;
-    text-align: center;
-    top: 13vh;
-}
+    .category-questions1 {
+        width: 100vw;
+        position: absolute;
+        color: #052554;
+        font-size: 3.6vmax;
+        text-align: center;
+        top: 13vh;
+    }
 
-.category-questions2{
-    width: 100vw;
-    position: absolute;
-    font-weight: 900;
-    color: #052554;
-    font-size: 3.6vmax;
-    text-align: center;
-    top: 17vh;
+    .category-questions2 {
+        width: 100vw;
+        position: absolute;
+        font-weight: 900;
+        color: #052554;
+        font-size: 3.6vmax;
+        text-align: center;
+        top: 17vh;
 
-}
+    }
 
-.call-title1 {
+    .call-title1 {
         height: 2.5vh;
         padding-right: 2vw;
         padding-left: 9vw;
@@ -660,7 +663,7 @@ body{
         font-weight: 700;
     }
 
-    #chap2-info{
+    #chap2-info {
         top: 22vh;
         width: 90%;
         height: 58vh;

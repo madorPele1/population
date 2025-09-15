@@ -17,6 +17,11 @@ body {
     src: url(../../assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
 }
 
+.info-div .info-text1 {
+    margin-top: 8vh;
+}
+
+
 #chooseCategory {
     display: block;
 }

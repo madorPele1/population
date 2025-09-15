@@ -320,6 +320,10 @@ body {
     margin-top: 8vh;
 }
 
+.call-chap3 .info-text1 {
+    margin-top: 8vh;
+}
+
 .explenation-text {
     position: absolute;
     font-size: 1.9vmax;
@@ -391,6 +395,10 @@ body {
     font-weight: 700;
     color: #052554;
 
+}
+
+#chap3-info {
+    overflow-y: scroll;
 }
 
 @media screen and (max-width: 450px) {

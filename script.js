@@ -297,6 +297,10 @@ const callManager = (event) => {
         }
         if (currentPage === "category2.html"){
             document.getElementById("chap1-info").style.overflowY = "scroll";
+            document.getElementById("info7").style.overflowY = "scroll";
+            document.getElementById("info8").style.overflowY = "scroll";
+            document.getElementById("info9").style.overflowY = "scroll";
+            document.getElementById("info10").style.overflowY = "scroll";
         }
         if (currentPage === "category1.html") {
             if (clicked <= 5) {

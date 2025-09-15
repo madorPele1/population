@@ -9,6 +9,9 @@ let currentArrow;
 let safeArrivalCounter;
 var imgCounter1;
 var imgCounter2;
+var imgCounter3;
+var imgCounter4;
+var imgCounter5;
 let emergencyCounter;
 var emergencyAns1;
 var emergencyAns2;
@@ -35,8 +38,11 @@ const IMPORTANT_TEXT = [`<b>1.</b> לאחר שבחרנו את המרחב המו�
 const IMPORTANT_DOTS = ["<b>●</b>●●●●", "●<b>●</b>●●●", "●●<b>●</b>●●", "●●●<b>●</b>●", "●●●●<b>●</b>"];
 var EQUIP_DOTS1  = ["<b>●</b>●●●●●", "●<b>●</b>●●●●", "●●<b>●</b>●●●", "●●●<b>●</b>●●", "●●●●<b>●</b>●", "●●●●●<b>●</b>"];
 var EQUIP_DOTS2  = ["<b>●</b>●●●", "●<b>●</b>●●", "●●<b>●</b>●", "●●●<b>●</b>"];
+var EQUIP_DOTS3  = ["<b>●</b>●●●●●", "●<b>●</b>●●●●", "●●<b>●</b>●●●", "●●●<b>●</b>●●", "●●●●<b>●</b>●", "●●●●●<b>●</b>"];
+var EQUIP_DOTS4  = ["<b>●</b>●", "●<b>●</b>"];
+var EQUIP_DOTS5  = ["<b>●</b>●●●", "●<b>●</b>●●", "●●<b>●</b>●", "●●●<b>●</b>"];
 const DISTRESS_TEXT = ['<b>הציגו לו את עצמכם והזכירו לו שהוא לא לבד</b><br> כולכם יחד באותה הסירה. נסו "לנרמל" עבורו את המצב כמה שאפשר, למשל באמצעות במשפטים דוגמת "גם אני מפחד, זה בסדר גמור להיות לחוץ, זו תגובה נורמלית למצב לא נורמלי"', '<b>הפעלה</b><br> מומלץ שלא לאפשר לאדם המבוגר לשבת באופן פסיבי ולחוש חסר אונים. במקום זאת כדאי לתת לו הוראות פשוטות לביצוע, שיסיחו את דעתו ויחזירו לו את תחושת השליטה במצב. כך למשל, "תתקשר לנכדים כדי לוודא שהם במרחב המוגן"', '<b> שאלו אותו שאלות שפונות אל השכל ולא רק אל הרגש </b><br>בנוסף לשאלה כמו "מה אתה מרגיש עכשיו?", מומלץ לשאול גם שאלות פשוטות ועובדתיות, כמו למשל "מה עשית כשהתקבלה ההתרעה?", "כמה זמן לקח לך להיכנס למרחב המוגן?"', '<b>להרגיע</b><br>אם אנשים בסביבתם מביעים מצוקה רגשית, תנו להם תחושה שהם לא לבד ואמרו בצורה רגועה וברורה שאתם איתם ושאתם לא עוזבים אותם. אפשרו להם להביע רגשות ותחושות שאינם פשוטים כמו לחץ וחרדה, וזכרו כי אלו תגובות נורמליות למצב שאינו נורמלי.', '<b>לשאול</b><br>חשוב לשאול את מי שנקלעו למצוקה שאלות מעוררות, שיעודדו אותם לחשוב. אל תסתפקו בשאלות שהתשובות עליהן מסתכמות ב"כן" ו"לא", אלא שאלו, למשל, היכן הם גרים, לאן הם רצו להגיע ומי היה איתם. שתפו אותם ברגשות שעולים בכם ועודדו גם אותם לעשות זאת.', '<b>להפעיל</b><br> כדי למנוע תחושת חוסר אונים, יש לאפשר לאנשים שבמצוקה לבחור מה ברצונם לעשות, למשל אם הם רוצים להמשיך בדרכם, להתקשר למישהו או לבצע כל פעולה אחרת. עודדו אותם לעשות את הפעולה שבחרו, הציעו את עזרתכם וסייעו בהתאם. נסו לעודד אותם לבצע פעילויות שהם אוהבים כדי לזמן תחושה נעימה וחיובית.', '<b>לסכם את האירוע</b><br>ספרו בפשטות מה התרחש, והסבירו את המצב ואת סדר האירועים. כך למשל, ציינו שהתקבלה התרעה, שהכל רגוע כעת ושהם יכולים להמשיך בדרכם, אם כך אכן המצב. על מנת להתמודד עם אי-הוודאות הכרוכה במצב, הציבו סימן קריאה רק על מה שאתם יודעים. זה מאפשר להגביר את חוויית השליטה במציאות ובהתנהלות האישית, שלא נמצאים לגמרי בשליטתנו עכשיו. כך למשל, שיש פעולות שניתן לנקוט בהן בזמן קבלת התרעה.', '<b>מתן סיוע רפואי</b><br> אם המתח הנפשי של הסובבים אתכם מתבטא בתופעות פיזיולוגיות כגון התקף חרדה, עילפון ואף אירוע לבבי, יש ליצור קשר באופן מידי עם המוקד הלאומי של מגן דוד אדום (מד"א) במספר 101. בקישור הזה מוסבר כיצד לזהות האם מי שבקרבתכם נזקק לסיוע רפואי וכיצד לסייע לו עד להגעת כוחות מד"א.'];
-const DISTRESS_DOTS = ["<b>●</b>●●●●●●●", "●<b>●</b>●●●●●●", "●●<b>●</b>●●●●●", "●●●<b>●</b>●●●●", "●●●●<b>●</b>●●●", "●●●●●<b>●</b>●●", "●●●●●●<b>●</b>●", "●●●●●●●<b>●</b>",];
+const DISTRESS_DOTS = ["<b>●</b>●●●●●●●", "●<b>●</b>●●●●●●", "●●<b>●</b>●●●●●", "●●●<b>●</b>●●●●", "●●●●<b>●</b>●●●", "●●●●●<b>●</b>●●", "●●●●●●<b>●</b>●", "●●●●●●●<b>●</b>"];
 let distressCounter;
 let importantCounter;
 let prepCounter;
@@ -77,6 +83,9 @@ window.addEventListener('load', () => {
     opened = false;
     imgCounter1 = 0;
     imgCounter2 = 8;
+    imgCounter3 = 15;
+    imgCounter4 = 24;
+    imgCounter5 = 28;
     safeArrivalCounter = 0;
     emergencyCounter = 0;
     distressCounter = 0;
@@ -89,8 +98,11 @@ window.addEventListener('load', () => {
     currentPage = currentPage.split("/");
     currentPage = currentPage[currentPage.length -1];
     console.log(currentPage);
-    
-    if (currentPage === "index.html" || currentPage === "") {
+
+    document.getElementById("phoneIcon").addEventListener("click", phoneList);
+    document.getElementById("phoneList").addEventListener("click", phoneList);
+
+    if (currentPage === "index.html") {
         document.getElementById(`startButton`).addEventListener("click", startButton);
     } else {
         category = currentPage[8];
@@ -111,7 +123,7 @@ window.addEventListener('load', () => {
         for (i=0; i<=4; i++) {
             document.getElementById(`mustSafe${i}`).addEventListener("click",mustProtectedManager);
         };
-        for (i=1; i<=2; i++) {
+        for (i=1; i<=5; i++) {
             document.getElementById(`front-arrow-img${i}`).addEventListener("click", imgDisplayManager);
         };
     };
@@ -155,6 +167,43 @@ const startButton = () => {
         document.getElementById("startPage").style.display="none";
         document.getElementById("homepage").style.display="block";
         document.getElementById("explenationHome").style.display="block";
+}
+
+const phoneList = () => {
+
+
+    if(window.innerWidth <= 450 ) {
+        if(currentPage==="category0.html" || currentPage==="index.html" || currentPage==="") {
+            document.getElementById("phoneList").setAttribute("src", "assets/images/phoneList-phone.svg");
+        } else {
+            document.getElementById("phoneList").setAttribute("src", "../assets/images/phoneList-phone.svg");
+        }
+
+         if (document.getElementById("phoneList").style.height == "40vh") {
+            document.getElementById("phoneList").style.height = "0vh";
+        } else {
+
+            setTimeout(() => {
+            document.getElementById("phoneList").style.height = "40vh";
+            document.getElementById("phoneList").style.right = "6vw";
+            document.getElementById("phoneList").style.cursor = "pointer";
+            }, 0);
+
+        }
+    } else {
+        if (document.getElementById("phoneList").style.height == "80vh") {
+            document.getElementById("phoneList").style.height = "0vh";
+            document.getElementById("phoneList").style.right = "54.5vw";
+        } else {
+
+            setTimeout(() => {
+            document.getElementById("phoneList").style.height = "80vh";
+            document.getElementById("phoneList").style.right = "48.5vw";
+            document.getElementById("phoneList").style.cursor = "pointer";
+            }, 0);
+
+        }
+    }
 }
 
 var categoryManager1 = (event) => {
@@ -520,13 +569,13 @@ const imgDisplayManager = (event) => {
         window[`imgCounter${arrowNum}`] = window[`imgCounter${arrowNum}`] + 1;
         for (i = 1; i <= 3; i++) {
             document.getElementById(`equipment-img${i}-${arrowNum}`).setAttribute("src", `../assets/images/protectedSpace/equipment${i + window[`imgCounter${arrowNum}`]}.svg`);
+                console.log(document.getElementById(`equipment-img${i}-${arrowNum}`))
         };
+
         document.getElementById(`back-arrow-img${arrowNum}`).style.opacity = 1;
         document.getElementById(`back-arrow-img${arrowNum}`).addEventListener("click", imgDisplayManager);
         console.log(arrowNum === 1 && imgCounter1 === 5)
-        if ((arrowNum === "1" && imgCounter1 === 5)  || (arrowNum === "2" && imgCounter2 === 11)) {
-            console.log("works2");
-
+        if ((arrowNum === "1" && imgCounter1 === 5)  || (arrowNum === "2" && imgCounter2 === 11) || (arrowNum === "3" && imgCounter3 === 20) || (arrowNum === "4" && imgCounter4 === 25) || (arrowNum === "5" && imgCounter5 === 31)) {
             document.getElementById(`front-arrow-img${arrowNum}`).style.opacity = 0;
             document.getElementById(`front-arrow-img${arrowNum}`).removeEventListener("click", imgDisplayManager);
         };
@@ -538,7 +587,7 @@ const imgDisplayManager = (event) => {
         };
         document.getElementById(`front-arrow-img${arrowNum}`).style.opacity = 1;
         document.getElementById(`front-arrow-img${arrowNum}`).addEventListener("click", imgDisplayManager);
-        if ((arrowNum === "1" && imgCounter1 === 0) || (arrowNum === "2" && imgCounter2 === 8)) {
+        if ((arrowNum === "1" && imgCounter1 === 0) || (arrowNum === "2" && imgCounter2 === 8) || (arrowNum === "3" && imgCounter3 === 15) || (arrowNum === "4" && imgCounter4 === 24) || (arrowNum === "5" && imgCounter5 === 28)) {
             console.log("works");
             document.getElementById(`back-arrow-img${arrowNum}`).style.opacity = 0;
             document.getElementById(`back-arrow-img${arrowNum}`).removeEventListener("click", imgDisplayManager);
@@ -552,6 +601,9 @@ const imgDisplayManager = (event) => {
         if (currentImg === "equipment9.svg") {
             document.getElementById(`equipment-img${i}-${arrowNum}`).style.position = "relative";
             document.getElementById(`equipment-img${i}-${arrowNum}`).style.top = "3vh";
+        } else if (currentImg === "equipment29.svg" || currentImg === "equipment30.svg") {
+            document.getElementById(`equipment-img${i}-${arrowNum}`).style.position = "relative";
+            document.getElementById(`equipment-img${i}-${arrowNum}`).style.top = "-2vh";
         } else {
             document.getElementById(`equipment-img${i}-${arrowNum}`).style.position = "relative";
             document.getElementById(`equipment-img${i}-${arrowNum}`).style.top = "0";
@@ -564,6 +616,12 @@ const imgDisplayManager = (event) => {
         document.getElementById(`page-move-color-equip-${arrowNum}`).innerHTML = currentEquip[window[`imgCounter${arrowNum}`]];
     } else if (arrowNum === "2") {
         document.getElementById(`page-move-color-equip-${arrowNum}`).innerHTML = currentEquip[window[`imgCounter${arrowNum}`] - 8];
+    }  else if (arrowNum === "3") {
+        document.getElementById(`page-move-color-equip-${arrowNum}`).innerHTML = currentEquip[window[`imgCounter${arrowNum}`] - 15];
+    }   else if (arrowNum === "4") {
+        document.getElementById(`page-move-color-equip-${arrowNum}`).innerHTML = currentEquip[window[`imgCounter${arrowNum}`] - 24];
+    } else if (arrowNum === "5") {
+        document.getElementById(`page-move-color-equip-${arrowNum}`).innerHTML = currentEquip[window[`imgCounter${arrowNum}`] - 28];
     };
 };
 
@@ -753,6 +811,4 @@ const emgTable = () => {
     document.getElementById(`go-to-emg-ques`).style.display = "block";
     document.getElementById(`emg-table-icons`).style.display = "flex";
     document.getElementById(`white-div-emergency`).style.display = "none";
-
 }
-

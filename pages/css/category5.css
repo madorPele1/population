@@ -25,6 +25,16 @@ body {
   z-index: 2;
 }
 
+#phoneList {
+  position: absolute;
+  z-index: 1000;
+  width: 65vw;
+  top: 11vh;
+  right: 54.5vw;
+  height: 0vh;
+  transition: all 0.5s;
+}
+
 #homeIcon {
   position: absolute;
   width: 12vw;
@@ -1927,5 +1937,15 @@ th {
 
   #fin-table td {
     height: 5vh;
+  }
+
+  #phoneList {
+    position: absolute;
+    z-index: 1000;
+    width: 85vw;
+    top: 9vh;
+    right: 6vw;
+    height: 0vh;
+    transition: all 0.5s;
   }
 }

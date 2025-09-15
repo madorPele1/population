@@ -90,7 +90,7 @@ window.addEventListener('load', () => {
     currentPage = currentPage[currentPage.length -1];
     console.log(currentPage);
     
-    if (currentPage === "index.html") {
+    if (currentPage === "index.html" || currentPage === "") {
         document.getElementById(`startButton`).addEventListener("click", startButton);
     } else {
         category = currentPage[8];
@@ -755,3 +755,4 @@ const emgTable = () => {
     document.getElementById(`white-div-emergency`).style.display = "none";
 
 }
+

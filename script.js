@@ -88,7 +88,8 @@ window.addEventListener('load', () => {
     currentPage = window.location.href;
     currentPage = currentPage.split("/");
     currentPage = currentPage[currentPage.length -1];
-
+    console.log(currentPage);
+    
     if (currentPage === "index.html") {
         document.getElementById(`startButton`).addEventListener("click", startButton);
     } else {
@@ -752,4 +753,5 @@ const emgTable = () => {
     document.getElementById(`go-to-emg-ques`).style.display = "block";
     document.getElementById(`emg-table-icons`).style.display = "flex";
     document.getElementById(`white-div-emergency`).style.display = "none";
+
 }

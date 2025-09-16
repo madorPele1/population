@@ -440,3 +440,19 @@ body {
     left: 58vw;
   }
 }
+
+#nagishli-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+nagishli #NagishLiTag > #NagishLiBar > #NagishLiBarStrip {
+    background-color: none;
+    color: #05255400;
+}
+
+body {
+    overflow: none;
+}

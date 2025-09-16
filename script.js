@@ -308,7 +308,7 @@ const callManager = (event) => {
     for (let i=1; i<=wantedCalls.length; i++) {
         document.getElementById(`info${i}`).style.height = "0vh";
         document.getElementById(`call${i}`).style.backgroundColor = "#ffffffff";
-        // document.getElementById(`down-arrow${i}`).style.rotate = "0deg";
+        document.getElementById(`down-arrow${i}`).style.rotate = "0deg";
     };
 
     if (clicked === event.target.id.replace(/\D/g, "") && opened) {
@@ -321,7 +321,7 @@ const callManager = (event) => {
             for(i=1; i <= categories.length; i++){
                 document.getElementById(`chap${i}-info`).style.overflowY = "hidden";
             }
-            // document.getElementById(`down-arrow${clicked}`).style.rotate = "0deg";
+            document.getElementById(`down-arrow${clicked}`).style.rotate = "0deg";
             document.getElementById(`call${clicked}`).style.backgroundColor = "#ffffffff";
             clicked = 0;
         };
@@ -372,7 +372,7 @@ const callManager = (event) => {
         }
         opened = true;
         document.getElementById(`call${clicked}`).style.backgroundColor = "#ffe4b7ff";
-        // document.getElementById(`down-arrow${clicked}`).style.rotate = "180deg";
+        document.getElementById(`down-arrow${clicked}`).style.rotate = "180deg";
         clicked = event.target.id.replace(/\D/g, "");
     };
 }

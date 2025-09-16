@@ -428,7 +428,7 @@ body {
 }
 
 #movePages-help {
-  top: 45vh;
+  top: 37vh;
   width: 65vw;
   right: 1vw;
 }
@@ -556,7 +556,7 @@ body {
 #white-div-help {
   width: 65vw;
   height: 28vh;
-  top: 27vh;
+  top: 29vh;
   right: 16vw;
 }
 
@@ -1427,4 +1427,10 @@ body {
     height: 0vh;
     transition: all 0.5s;
   }
+}
+
+#nagishli-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

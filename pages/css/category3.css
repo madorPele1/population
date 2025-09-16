@@ -317,17 +317,17 @@ body {
   left: 5%;
 }
 
-#info-text1 {
+/* #info-text1 {
   margin-top: 8vh;
-}
-
+} */
+/* 
 #info-text6 {
   margin-top: 8vh;
-}
+} */
 
-.call-chap3 .info-text1 {
+/* .call-chap3 .info-text1 {
   margin-top: 8vh;
-}
+} */
 
 .explenation-text {
   position: absolute;
@@ -377,14 +377,15 @@ body {
   border-radius: 2vw;
   font-size: 1.8vmax;
   top: 25%;
-  overflow-y: hidden;
+  overflow-y: scroll;
   height: 60vh;
 }
 
 .call-title1 {
-  height: 4vh;
+   height: auto;
   color: #2f3043;
   padding-right: 2vw;
+  width: 90%;
 }
 
 .name-info1 {
@@ -677,4 +678,10 @@ body {
     height: 58vh;
     right: 5%;
   }
+}
+
+#nagishli-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

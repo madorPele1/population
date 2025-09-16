@@ -207,9 +207,10 @@ body {
 }
 
 .call-title {
-  height: 3.5vh;
+   height: auto;
   color: #2f3043;
   padding-right: 2vw;
+  width: 90%;
 }
 
 .spec-call {
@@ -653,6 +654,7 @@ body {
   top: 13vh;
 }
 
+
 @media screen and (max-width: 450px) {
   body {
     width: 100vw;
@@ -1076,4 +1078,11 @@ body {
     height: 0vh;
     transition: all 0.5s;
   }
+
+}
+
+#nagishli-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

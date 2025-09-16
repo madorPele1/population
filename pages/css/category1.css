@@ -396,7 +396,6 @@ body {
   }
 
   .info-text1 {
-    margin-top: 8vh;
     font-size: 2.5vmax;
     width: 90%;
     margin-right: 1vw;
@@ -542,4 +541,10 @@ body {
     height: 0vh;
     transition: all 0.5s;
   }
+}
+
+#nagishli-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

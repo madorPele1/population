@@ -212,9 +212,14 @@ body {
 }
 
 .call-title {
-  height: 3.5vh;
+  height: auto;
   color: #2f3043;
-  padding-right: 1vw;
+  padding-right: 2vw;
+  width: 90%;
+}
+
+#down-arrow9 {
+  margin-top: -4.5vh;
 }
 
 .spec-call {
@@ -232,9 +237,8 @@ body {
   padding-bottom: 3vh;
   position: relative;
   bottom: 3vh;
-  padding-right: 2vw;
   padding-bottom: 1vw;
-  font-size: 1.8vmax;
+  font-size: 1.7vmax;
   font-family: Assistant;
   font-weight: 700;
   color: #052554;
@@ -1203,6 +1207,7 @@ th {
 
 #chap1-info {
   top: 26vh;
+  overflow-y: scroll;
 }
 
 @media print {
@@ -1521,7 +1526,7 @@ th {
     bottom: 3vh;
     padding-right: 2vw;
     padding-bottom: 1vw;
-    font-size: 2.5vmax;
+    font-size: 2vmax;
     font-family: Assistant;
     font-weight: 700;
   }
@@ -1948,4 +1953,10 @@ th {
     height: 0vh;
     transition: all 0.5s;
   }
+}
+
+#nagishli-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

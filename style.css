@@ -260,12 +260,34 @@ body {
     font-family: Assistant;
   }
 
+  .common-questions-btn {
+    position: absolute;
+    width: 52vw;
+    height: 3.5vh;
+    border: none;
+    background-color: #ffb33c;
+    color: #052554;
+    font-size: 1.4vmax;
+    font-family: "assistant";
+    font-weight: bold;
+    top: 10.5vh;
+    border: none;
+    right: 24vw;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
   #pkarIcon {
     position: absolute;
     width: 12vw;
     height: 12vh;
-    top: 1vh;
+    top: 0.2vh;
     right: 24vw;
+    z-index: 333;
+  }
+
+  #homeIcon:hover {
+    cursor: pointer;
   }
 
   #soliderSpeech {
@@ -282,15 +304,16 @@ body {
     height: 7.5vh;
     border-radius: 40px;
     background-color: #dbdbdb;
-    top: 3.3vh;
+    top: 2.6vh;
     right: 21.5vw;
   }
+
   .icons {
     position: absolute;
     display: flex;
     justify-content: space-around;
     width: 35vw;
-    top: 4vh;
+    top: 3.2vh;
     right: 38vw;
     background-color: #ffb33c;
     height: 6vh;
@@ -298,6 +321,7 @@ body {
     padding-left: 2vw;
     padding-right: 2vw;
   }
+
 
   .icon {
     width: 9vw;

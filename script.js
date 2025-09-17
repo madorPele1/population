@@ -111,6 +111,9 @@ window.addEventListener('load', () => {
             categories[i].addEventListener("click", window[`categoryManager${category}`]);
         };
         document.getElementById(`back-button`).addEventListener("click", backManager);
+        if (!(currentPage === "category1.html" || currentPage === "category4.html")){
+            document.getElementById(`common-questions-btn`).addEventListener("click", toCommonQuesPage);
+        };
     };
     
     calls = document.getElementsByClassName("spec-call");
@@ -212,6 +215,9 @@ var categoryManager1 = (event) => {
     document.getElementById(`main-page1`).style.display="none";
     document.getElementById(`category${currentCategory}-page`).style.display="block";
     document.getElementById(`back-button`).style.display="block";
+    if (!(currentPage === "category1.html" || currentPage === "category4.html")){
+        commonQuesBtn();
+    };
 }
 
 var categoryManager2 = (event) => {
@@ -220,6 +226,10 @@ var categoryManager2 = (event) => {
     document.getElementById(`main-page1`).style.display="none";
     document.getElementById(`category${currentCategory}-page`).style.display="block";
     document.getElementById(`back-button`).style.display="block";
+    if (!(currentPage === "category1.html" || currentPage === "category4.html")){
+        commonQuesBtn();
+    };
+
 }
 
 var categoryManager3 = (event) => {
@@ -228,6 +238,10 @@ var categoryManager3 = (event) => {
     document.getElementById(`main-page1`).style.display="none";
     document.getElementById(`category${currentCategory}-page`).style.display="block";
     document.getElementById(`back-button`).style.display="block";
+    if (!(currentPage === "category1.html" || currentPage === "category4.html")){
+        commonQuesBtn();
+    };
+
 }
 
 
@@ -237,6 +251,10 @@ var categoryManager4 = (event) => {
     document.getElementById(`main-page1`).style.display="none";
     document.getElementById(`category${currentCategory}-page`).style.display="block";
     document.getElementById(`back-button`).style.display="block";
+    if (!(currentPage === "category1.html" || currentPage === "category4.html")){
+        commonQuesBtn();
+    };
+
 }
 
 var categoryManager5 = (event) => {
@@ -245,6 +263,10 @@ var categoryManager5 = (event) => {
     document.getElementById(`main-page1`).style.display="none";
     document.getElementById(`category${currentCategory}-page`).style.display="block";
     document.getElementById(`back-button`).style.display="block";
+    if (!(currentPage === "category1.html" || currentPage === "category4.html")){
+        commonQuesBtn();
+    };
+
 }
 
 const backManager = () => {
@@ -279,6 +301,16 @@ const backManager = () => {
         document.getElementById(`category${currentCategory}-page`).style.display="none";
         document.getElementById(`back-button`).style.display="none";
     }
+    if (currentPage === "category3.html") {
+        document.getElementById("category4-page").style.display = "none";
+    } else if (currentPage === "category4.html" || currentPage === "category5.html") {
+        document.getElementById("category5-page").style.display = "none";
+    } else if (currentPage === "category2.html") {
+        document.getElementById("category6-page").style.display = "none";
+    };
+    if (!(currentPage === "category1.html" || currentPage === "category4.html")){
+        commonQuesBtn();
+    };
 };
 
 const circleManager = (event) => {
@@ -319,7 +351,11 @@ const callManager = (event) => {
             document.getElementById(`info${clicked}`).style.height = "0vh";
             document.getElementById(`info${clicked}`).style.marginTop = "0vh";
             for(i=1; i <= categories.length; i++){
-                document.getElementById(`chap${i}-info`).style.overflowY = "hidden";
+                if (screen.width > "450") {
+                    document.getElementById(`chap${i}-info`).style.overflowY = "hidden";
+                } else {
+                    document.getElementById(`chap${i}-info`).style.overflowY = "scroll";
+                }
             }
             document.getElementById(`down-arrow${clicked}`).style.rotate = "0deg";
             document.getElementById(`call${clicked}`).style.backgroundColor = "#ffffffff";
@@ -338,6 +374,10 @@ const callManager = (event) => {
             } else {
                 if (screen.width < "450") {
                     document.getElementById(`info${clicked}`).style.height = "20vh";
+                    console.log(event.target.id);
+                    if (clicked == "5") {
+                        document.getElementById(`info${clicked}`).style.height = "30vh";
+                    };
                 } else {
                     document.getElementById(`info${clicked}`).style.height = "50vh";
                 }
@@ -809,6 +849,40 @@ const emgTable = () => {
     }
     document.getElementById(`fin-table`).style.display = "block";
     document.getElementById(`go-to-emg-ques`).style.display = "block";
-    document.getElementById(`emg-table-icons`).style.display = "flex";
+
+    if(window.innerWidth <= 450 ) {
+        document.getElementById(`emg-table-icons`).style.display = "none";
+    } else {
+        document.getElementById(`emg-table-icons`).style.display = "flex";
+    }
+
     document.getElementById(`white-div-emergency`).style.display = "none";
-}
+};
+
+const commonQuesBtn = () => {
+    if (document.getElementById("category1-page").style.display === "block" || document.getElementById("category2-page").style.display === "block" || document.getElementById("category3-page").style.display === "block" ) {
+        document.getElementById(`common-questions-btn`).style.display = "block";
+    } else {
+        document.getElementById(`common-questions-btn`).style.display = "none";
+    }
+    if (currentPage === "category5.html" || currentPage === "category2.html") {
+        if (document.getElementById("category1-page").style.display === "block" || document.getElementById("category2-page").style.display === "block" || document.getElementById("category3-page").style.display === "block" || document.getElementById("category4-page").style.display === "block" || (document.getElementById("category5-page").style.display === "block" && (currentPage === "category2.html"))) {
+            document.getElementById(`common-questions-btn`).style.display = "block";
+        } else {
+            document.getElementById(`common-questions-btn`).style.display = "none";
+        }
+    }
+
+};
+
+const toCommonQuesPage = () => {
+    if (currentPage === "category3.html") {
+        document.getElementById("category4-page").style.display = "block";
+    } else if (currentPage === "category5.html") {
+        document.getElementById("category5-page").style.display = "block";
+    } else if (currentPage === "category2.html") {
+        document.getElementById("category6-page").style.display = "block";
+    }
+    document.getElementById(`category${currentCategory}-page`).style.display="none";
+    document.getElementById(`common-questions-btn`).style.display = "none";
+};

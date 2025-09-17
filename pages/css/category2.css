@@ -207,7 +207,7 @@ body {
 }
 
 .call-title {
-   height: auto;
+  height: auto;
   color: #2f3043;
   padding-right: 2vw;
   width: 90%;
@@ -230,7 +230,7 @@ body {
   bottom: 3vh;
   padding-right: 0vw;
   padding-bottom: 1vw;
-  font-size: 1.7vmax;
+  font-size: 1.8vmax;
   font-family: Assistant;
   font-weight: 700;
   color: #052554;
@@ -615,15 +615,14 @@ body {
 }
 
 #equipment-img1-5 {
-    position: relative;
-    top: -2vh;
+  position: relative;
+  top: -2vh;
 }
 
 #equipment-img2-5 {
-    position: relative;
-    top: -2vh;
+  position: relative;
+  top: -2vh;
 }
-
 
 #info8-text {
   padding-top: 4vh;
@@ -654,6 +653,11 @@ body {
   top: 13vh;
 }
 
+.video {
+  position: absolute;
+  top: 14vh;
+  right: 20vw;
+}
 
 @media screen and (max-width: 450px) {
   body {
@@ -668,6 +672,15 @@ body {
     overflow-y: hidden;
     direction: rtl;
     font-family: Assistant;
+  }
+
+  .video {
+    position: absolute;
+    top: 16vh;
+    right: 10vw;
+    width: 80vw;
+    height: 60vh;
+    border-radius: 1vw;
   }
 
   .backbutton {
@@ -906,7 +919,7 @@ body {
     bottom: 3vh;
     padding-right: 2vw;
     padding-bottom: 1vw;
-    font-size: 2vmax;
+    font-size: 2.5vmax;
     font-family: Assistant;
     font-weight: 700;
   }
@@ -1078,11 +1091,10 @@ body {
     height: 0vh;
     transition: all 0.5s;
   }
-
 }
 
 #nagishli-btn {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

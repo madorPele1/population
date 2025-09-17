@@ -238,7 +238,7 @@ body {
   position: relative;
   bottom: 3vh;
   padding-bottom: 1vw;
-  font-size: 1.7vmax;
+  font-size: 1.8vmax;
   font-family: Assistant;
   font-weight: 700;
   color: #052554;
@@ -1526,7 +1526,7 @@ th {
     bottom: 3vh;
     padding-right: 2vw;
     padding-bottom: 1vw;
-    font-size: 2vmax;
+    font-size: 2.5vmax;
     font-family: Assistant;
     font-weight: 700;
   }
@@ -1956,7 +1956,7 @@ th {
 }
 
 #nagishli-btn {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

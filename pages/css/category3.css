@@ -117,6 +117,31 @@ body {
   top: 5vh;
 }
 
+.common-questions-btn {
+  position: absolute;
+  width: 15vw;
+  height: 9vh;
+  border: none;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #052554;
+  color: #ffffff;
+  font-size: 1.2vmax;
+  font-family: "assistant";
+  font-weight: bold;
+  top: 13.5vh;
+  left: 0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: none;
+   z-index: 444;
+}
+
+.common-questions-btn:hover {
+  width: 14vw;
+}
+
 .titleIcon {
   position: relative;
   width: 10vw;
@@ -407,7 +432,9 @@ body {
 .video {
   position: absolute;
   top: 14vh;
-  right: 20vw;
+  right: 16vw;
+  width: 66vw;
+  height: 75vh;
 }
 @media screen and (max-width: 450px) {
   body {
@@ -442,13 +469,15 @@ body {
     height: 0vh;
     transition: all 0.5s;
   }
+  
 
   #pkarIcon {
     position: absolute;
     width: 12vw;
     height: 12vh;
-    top: 1vh;
+    top: 0.2vh;
     right: 24vw;
+    z-index: 333;
   }
 
   .backbutton {
@@ -480,13 +509,13 @@ body {
     left: 53vw;
   }
 
-  #navbar {
+   #navbar {
     position: absolute;
     width: 57vw;
     height: 7.5vh;
     border-radius: 40px;
     background-color: #dbdbdb;
-    top: 3.3vh;
+    top: 2.6vh;
     right: 21.5vw;
   }
 
@@ -495,7 +524,7 @@ body {
     display: flex;
     justify-content: space-around;
     width: 35vw;
-    top: 4vh;
+    top: 3.2vh;
     right: 38vw;
     background-color: #ffb33c;
     height: 6vh;
@@ -503,7 +532,6 @@ body {
     padding-left: 2vw;
     padding-right: 2vw;
   }
-
   .icon {
     width: 9vw;
   }
@@ -567,10 +595,10 @@ body {
     right: 5vw;
     height: 36vh;
     top: 43vh;
+    overflow-y: scroll;
   }
 
   .call-title {
-    height: 2.5vh;
     padding-right: 2.8vw;
     padding-bottom: 0vw;
   }
@@ -587,7 +615,7 @@ body {
     bottom: 3vh;
     padding-right: 12vw;
     padding-bottom: 6vw;
-     font-size: 2.5vmax;
+    font-size: 2.2vmax;
     font-family: Assistant;
     font-weight: 700;
   }
@@ -672,7 +700,6 @@ body {
   }
 
   .call-title1 {
-    height: 2.5vh;
     padding-right: 2vw;
     padding-left: 9vw;
   }
@@ -691,6 +718,23 @@ body {
     width: 90%;
     height: 58vh;
     right: 5%;
+  }
+
+  .common-questions-btn {
+     position: absolute;
+    width: 52vw;
+    height: 3.5vh;
+    border: none;
+    background-color: #ffb33c;
+    color: #052554;
+    font-size: 1.4vmax;
+    font-family: "assistant";
+    font-weight: bold;
+    top: 10.5vh;
+    border: none;
+    right: 24vw;
+    border-radius: 40px;
+    cursor: pointer;
   }
 }
 

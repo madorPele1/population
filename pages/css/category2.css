@@ -653,10 +653,37 @@ body {
   top: 13vh;
 }
 
+
 .video {
   position: absolute;
   top: 14vh;
-  right: 20vw;
+  right: 16vw;
+  width: 66vw;
+  height: 75vh;
+}
+.common-questions-btn {
+    position: absolute;
+    width: 15vw;
+    height: 9vh;
+    border: none;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: #052554;
+    color: #ffffff;
+    font-size: 1.2vmax;
+    font-family: "assistant";
+    font-weight: bold;
+    top: 13.5vh;
+    left: 0;
+    border: none;
+    cursor: pointer;
+    transition: all .5s;
+    display: none;
+     z-index: 444;
+}
+
+.common-questions-btn:hover {
+  width: 14vw;
 }
 
 @media screen and (max-width: 450px) {
@@ -673,6 +700,8 @@ body {
     direction: rtl;
     font-family: Assistant;
   }
+
+
 
   .video {
     position: absolute;
@@ -704,21 +733,42 @@ body {
     cursor: pointer;
   }
 
+  .common-questions-btn {
+    position: absolute;
+    width: 52vw;
+    height: 3.5vh;
+    border: none;
+    background-color: #ffb33c;
+    color: #052554;
+    font-size: 1.4vmax;
+    font-family: "assistant";
+    font-weight: bold;
+    top: 10.5vh;
+    border: none;
+    right: 24vw;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
   #pkarIcon {
     position: absolute;
     width: 12vw;
     height: 12vh;
-    top: 1vh;
+    top: 0.2vh;
     right: 24vw;
+    z-index: 333;
+  }
+
+  #homeIcon:hover {
+    cursor: pointer;
   }
 
   #soliderSpeech {
     position: absolute;
-    width: 45vw;
+    width: 52vw;
     height: 52vh;
-    top: 55vh;
-    left: 58vw;
-    z-index: 899;
+    top: 54vh;
+    left: 53vw;
   }
 
   #navbar {
@@ -727,7 +777,7 @@ body {
     height: 7.5vh;
     border-radius: 40px;
     background-color: #dbdbdb;
-    top: 3.3vh;
+    top: 2.6vh;
     right: 21.5vw;
   }
 
@@ -736,7 +786,7 @@ body {
     display: flex;
     justify-content: space-around;
     width: 35vw;
-    top: 4vh;
+    top: 3.2vh;
     right: 38vw;
     background-color: #ffb33c;
     height: 6vh;
@@ -898,10 +948,10 @@ body {
     right: 5vw;
     height: 55vh;
     top: 23vh;
+    overflow-y: scroll;
   }
 
   .call-title {
-    height: 2.5vh;
     padding-right: 2vw;
     padding-left: 9vw;
   }
@@ -1011,6 +1061,11 @@ body {
     position: relative;
     top: 6vh;
     right: 0vw;
+  }
+
+  #page-move-color-equip-5 {
+    position: relative;
+    top: 15vh;
   }
 
   .page-move-color {

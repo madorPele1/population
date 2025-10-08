@@ -429,21 +429,21 @@
                     <p id="white-div-text1-prep"><b>אנשי הקשר שלי לחירום</b><br></p>
                     <div class="contact-persons">
                         <div class="contact-person">
-                            <input type="text" placeholder="שם" id="contact-name1" class="contact-name">
+                            <input type="text" placeholder="שם" id="contact-name1" class="contact-name" onkeypress="return isLetterOrSpaceKey(event)" onpaste="return false;">
                             <input type="text" placeholder="מספר טלפון" id="phoneNumber1" class="phoneNumber"
-                                maxlength="10">
+                                maxlength="10" inputmode="numeric" pattern="[0-9]{10}" onkeypress="return isNumberKey(event)" onpaste="return false;">
                             <button id="btn-add-contact1" class="btn-add-contact">הוספת איש קשר</button>
                         </div>
                         <div class="contact-person">
-                            <input type="text" placeholder="שם" id="contact-name2" class="contact-name">
+                            <input type="text" placeholder="שם" id="contact-name2" class="contact-name" onkeypress="return isLetterOrSpaceKey(event)" onpaste="return false;">
                             <input type="text" placeholder="מספר טלפון" id="phoneNumber2" class="phoneNumber"
-                                maxlength="10">
+                                maxlength="10" onkeypress="return isNumberKey(event)" onpaste="return false;">
                             <button id="btn-add-contact2" class="btn-add-contact">הוספת איש קשר</button>
                         </div>
                         <div class="contact-person">
-                            <input type="text" placeholder="שם" id="contact-name3" class="contact-name">
+                            <input type="text" placeholder="שם" id="contact-name3" class="contact-name" onkeypress="return isLetterOrSpaceKey(event)" onpaste="return false;">
                             <input type="text" placeholder="מספר טלפון" id="phoneNumber3" class="phoneNumber"
-                                maxlength="10">
+                                maxlength="10" onkeypress="return isNumberKey(event)" onpaste="return false;">
                             <button id="btn-add-contact3" class="btn-add-contact">הוספת איש קשר</button>
                         </div>
                     </div>
@@ -520,5 +520,6 @@
         </table>
     </div>
 </body>
+
 
 </html>

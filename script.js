@@ -119,6 +119,8 @@ window.addEventListener('load', () => {
     calls = document.getElementsByClassName("spec-call");
     for (i=0; i<calls.length; i++) {
         calls[i].addEventListener("click", callManager);
+        console.log(document.getElementById(`name${i + 1}`));
+        document.getElementById(`name${i + 1}`).addEventListener("click", callManager);
     };
     clicked = 0;
 
@@ -886,3 +888,22 @@ const toCommonQuesPage = () => {
     document.getElementById(`category${currentCategory}-page`).style.display="none";
     document.getElementById(`common-questions-btn`).style.display = "none";
 };
+
+const isNumberKey = (evt) => {
+    const charCode = evt.which ? evt.which : evt.keyCode;
+    // Allow only numbers (0–9)
+    return charCode >= 48 && charCode <= 57;
+
+}
+
+const isLetterOrSpaceKey = (evt) => {
+    const charCode = evt.which ? evt.which : evt.keyCode;
+
+    // Allow space (charCode 32)
+    if (charCode === 32) return true;
+
+    // Allow uppercase letters (A–Z): 65–90
+    // Allow lowercase letters (a–z): 97–122
+    return (charCode >= 65 && charCode <= 90) ||
+           (charCode >= 97 && charCode <= 122);
+}

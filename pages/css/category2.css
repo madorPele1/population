@@ -17,6 +17,26 @@ body {
   src: url(../../assets/fonts/assistant/Assistant-VariableFont_wght.ttf);
 }
 
+#page-move-color-equip-1 {
+  display: none;
+}
+
+#page-move-color-equip-2 {
+  display: none;
+}
+
+#page-move-color-equip-3 {
+  display: none;
+}
+
+#page-move-color-equip-4 {
+  display: none;
+}
+
+#page-move-color-equip-5 {
+  display: none;
+}
+
 #phoneList {
   position: absolute;
   z-index: 1000;
@@ -202,43 +222,8 @@ body {
   font-size: 1.8vmax;
   top: 25%;
   overflow-y: hidden;
-  height: 70vh;
+  height: 60vh;
   overflow-y: scroll;
-}
-
-.call-title {
-  height: auto;
-  color: #2f3043;
-  padding-right: 2vw;
-  width: 90%;
-}
-
-.spec-call {
-  padding-top: 5vh;
-  padding-bottom: 0vh;
-  display: flex;
-  flex-wrap: wrap;
-  border-bottom: solid 2px #c3c9d0;
-  border-radius: 2vh;
-  transition: all 0.5s;
-  background-color: #ffffff;
-}
-
-.name-info {
-  padding-bottom: 3vh;
-  position: relative;
-  bottom: 3vh;
-  padding-right: 0vw;
-  padding-bottom: 1vw;
-  font-size: 1.8vmax;
-  font-family: Assistant;
-  font-weight: 700;
-  color: #052554;
-}
-
-.spec-call:hover {
-  background-color: #ffe4b7ff;
-  cursor: pointer;
 }
 
 .title-chap1-info {
@@ -274,16 +259,6 @@ body {
   font-size: 1.6vmax;
 }
 
-.info-text1 {
-  margin-top: 1vh;
-  font-size: 1.8vmax;
-  width: 90%;
-  margin-right: 1vw;
-  font-weight: 450;
-  color: #052554;
-  overflow-y: scroll;
-}
-
 .info-div {
   height: 0;
   transition: all 0.4s;
@@ -296,14 +271,6 @@ body {
   border-bottom-right-radius: 1vw;
   border-bottom-left-radius: 1vw;
   margin: 0.5vw;
-}
-
-.down-arrow {
-  position: absolute;
-  width: 2vw;
-  margin-top: -1.5vh;
-  left: 2vw;
-  transition: all 0.4s;
 }
 
 .long-info {
@@ -579,6 +546,8 @@ body {
   position: relative;
   top: 22vh;
   right: 0vw;
+  user-select: none;
+
 }
 
 #back-arrow-img1 {
@@ -963,16 +932,6 @@ body {
     margin: 2vw;
   }
 
-  .name-info {
-    padding-bottom: 3vh;
-    position: relative;
-    bottom: 3vh;
-    padding-right: 2vw;
-    padding-bottom: 1vw;
-    font-size: 2.5vmax;
-    font-family: Assistant;
-    font-weight: 700;
-  }
 
   .info-text1 {
     margin-top: 8vh;
@@ -1066,6 +1025,7 @@ body {
   #page-move-color-equip-5 {
     position: relative;
     top: 15vh;
+    display: none;
   }
 
   .page-move-color {

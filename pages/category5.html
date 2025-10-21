@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/category5.css">
+    <link rel="stylesheet" href="css/gen.css">
     <script src="../script.js"></script>
     <title>היערכות לחירום</title>
     <script src="../nagishLi/nagishli.js"></script>
@@ -23,7 +24,7 @@
     <img id="pkarIcon" src="../assets/images/pkarIcon.svg" alt="pkarIcon">
     <img id="homeIcon" src="../assets/images/homeIcon.svg" alt="homeIcon"
         onclick="window.location.href = `../category0.html`;">
-    <div class="button backbutton" id="back-button">חזור</div>
+    <div class="button backbutton" id="back-button" onclick='if(document.getElementById(`back-button`).style.display === "block") {document.getElementById(`back-button`).style.display="none";}'>חזור</div>
     <div id="main-page1">
         <img class="solider" src="../assets/images/solider.svg" alt="soliderSpeech">
         <div class="categoryTitle"> <img class="titleIcon" src="../assets/images/copinIcon.svg" alt="alertIcon">היערכות
@@ -33,7 +34,7 @@
             <img class="category" id="category2" src="../assets/images/coping/categoryCoping2.svg" alt="category2">
             <img class="category" id="category3" src="../assets/images/coping/categoryCoping3.svg" alt="category3">
             <img class="category" id="category4" src="../assets/images/coping/categoryCoping4.svg" alt="category4">
-            <img class="category" id="category6" src="../assets/images/coping/categoryCoping6.svg" alt="category6" onclick='document.getElementById(`back-button`).style.display="block"; document.getElementById(`emergency-plan`).style.display = `block`'>
+            <img class="category" id="category6" src="../assets/images/coping/categoryCoping6.svg" alt="category6" onclick='document.getElementById(`back-button`).style.display="block"; document.getElementById(`emergency-plan`).style.display = `block`;'>
             <img class="category" id="category5" src="../assets/images/coping/categoryCoping5.svg" alt="category5">
         </div>
     </div>
@@ -140,8 +141,8 @@
                 </div>
             </div>
             <div class="spec-call first-call" id="call7">
-                <div class="call-title"><span class="name-info" id="name7">מקום מפגש</span><img
-                        src="../assets/images/arrowdown.svg" alt="down-arrow" class="down-arrow" id="down-arrow7"></div>
+                <div class="call-title"><span class="name-info" id="name7">מקום מפגש</span>
+                    <img src="../assets/images/arrowdown.svg" alt="down-arrow" class="down-arrow" id="down-arrow7"></div>
                 <div class="info-div" id="info7">
                     <p class="info-text1"><br>קבעו יחד עם בני המשפחה מקום מוסכם מחוץ לבית, שבו תוכלו להיפגש במקרה שבו יהיה
                         צורך להתפנות מהבית. <br>
@@ -150,6 +151,8 @@
                     </p>
                 </div>
             </div>
+            <button id="go-to-planning-btn" class="go-to-planning-btn button" onclick='document.getElementById(`back-button`).style.display="block"; document.getElementById(`emergency-plan`).style.display = `block`; document.getElementById(`go-to-planning-btn`).style.display = `none`'>לבניית תוכנית חירום אישית</button>
+
         </div>
     </div>
     <div id="category3-page" class="page5">

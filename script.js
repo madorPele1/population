@@ -27,7 +27,7 @@ const SAFE_ARRIVAL = ["בדקו ביחד עם האדם המבוגר כמה זמ�
 אם האדם המבוגר נדרש לאביזרים המסייעים לו להתנייד כמו כיסא גלגלים או הליכון, יש להכין אותם בקרבת מקום כך שיוכל להגיע אליהם במהירות במידת הצורך.` ]
 const SAFE_ARRIVAL_DOTS = ["<b>●</b>●●●●", "●<b>●</b>●●●", "●●<b>●</b>●●", "●●●<b>●</b>●", "●●●●<b>●</b>"];
 let neighborsCounter;
-const NEIGHBORS_TEXT = ["הנגישו למטפל בשפתו את כל ההנחיות. באתר זה תוכלו למצוא הנחיות בשפה האנגלית והרוסית.", "טקסטעדכנו את המטפל מראש מה זמן ההתגוננות באזור המגורים וודאו שהוא יודע כיצד לפעול בעת קבלת התרעה בכל מקום בו הוא נמצא.", "יש להראות למטפל את המרחב המוגן ולתכנן יחד איתו את דרך ההגעה המהירה והבטוחה ביותר.", "אם הדבר נדרש, סייעו למטפל הזר בהורדת יישומון פיקוד העורף כדי שיקבל התרעות בהתאם למיקומו.", 'העבירו ושמרו בטלפון של המטפל את הטלפונים הנדרשים בעת הצורך: מוקד פיקוד העורף (104), משטרה (100), מד"א (101) , המוקד העירוני (106) , קרובי משפחה וארגוני סיוע.', "הנחו את המטפל כי לאחר כל התרעה יש ליצור קשר עם קרובי המשפחה ולעדכן שהכל בסדר."];
+const NEIGHBORS_TEXT = ["הנגישו למטפל בשפתו את כל ההנחיות. באתר זה תוכלו למצוא הנחיות בשפה האנגלית והרוסית.", "עדכנו את המטפל מראש מה זמן ההתגוננות באזור המגורים וודאו שהוא יודע כיצד לפעול בעת קבלת התרעה בכל מקום בו הוא נמצא.", "יש להראות למטפל את המרחב המוגן ולתכנן יחד איתו את דרך ההגעה המהירה והבטוחה ביותר.", "אם הדבר נדרש, סייעו למטפל הזר בהורדת יישומון פיקוד העורף כדי שיקבל התרעות בהתאם למיקומו.", 'העבירו ושמרו בטלפון של המטפל את הטלפונים הנדרשים בעת הצורך: מוקד פיקוד העורף (104), משטרה (100), מד"א (101) , המוקד העירוני (106) , קרובי משפחה וארגוני סיוע.', "הנחו את המטפל כי לאחר כל התרעה יש ליצור קשר עם קרובי המשפחה ולעדכן שהכל בסדר."];
 const NEIGHBORS_DOTS = ["<b>●</b>●●●●●", "●<b>●</b>●●●●", "●●<b>●</b>●●●", "●●●<b>●</b>●●", "●●●●<b>●</b>●", "●●●●●<b>●</b>"];
 const AGRICULTURE_TEXT = ["וודאו באמצעות הגוף שבו אתם מתנדבים כי באזור שבו אתם מעוניינים להתנדב, ניתן אישור להגיע לצורך פעולות התנדבות בחקלאות ומה ההנחיות הפרטניות לאזור.", "בדקו מהו זמן הכניסה למרחב המוגן באזור שאליו אתם מגיעים ומה המרחב המוגן שלכם לפני הפעילות. במקום ההתנדבות, על החקלאי להעביר תדריך למתנדבים בנושא הנחיות ההתנהגות בעת קבלת התרעה. אם יש יכולת להגיע למרחב המוגן בזמן העומד לרשותכם, על החקלאי להסביר היכן המרחב המוגן הזה, ובעת קבלת התרעה להיכנס אליו למשך 10 דקות. אם אין יכולת להגיע למרחב המוגן בזמן ההתגוננות, יש לפעול בהתאם להנחיות בשטח פתוח.", "הורידו את יישומון פיקוד העורף - מכיוון שעבודה חקלאית מתרחשת לרוב בשטח פתוח, ייתכן שלא תשמעו התרעה מצופרי של פיקוד העורף כדי לוודא שתקבלו התרעות, יש להוריד את יישומון פיקוד העורף, שהוא היחיד שמספק התרעה בשטחים פתוחים. בנוסף, חשוב להגדיר את המיקום שבו מתבצעת הפעילות כאזור עניין ביישומון, כדי להיות בטוחים שתקבלו התרעה גם אם יש שיבושים בקליטת ה-GPS.", " בדקו כי הגוף שדרכו אתם מתנדבים הוא גוף מורשה לניהול מתנדבים המספק כיסוי ביטוחי."];
 const AGRICULTURE_DOTS = ["<b>●</b>●●●", "●<b>●</b>●●", "●●<b>●</b>●", "●●●<b>●</b>"];
@@ -268,7 +268,6 @@ var categoryManager5 = (event) => {
     if (!(currentPage === "category1.html" || currentPage === "category4.html")){
         commonQuesBtn();
     };
-
 }
 
 const backManager = () => {
@@ -276,7 +275,6 @@ const backManager = () => {
         for (i=1; i<=4; i++) {
             document.getElementById(`circle${i}-page`).style.display="none";
         };
-        console.log(currentCategory);
         if (currentCategory == "1") {
             if (document.getElementById("category1-circles").style.display === "block") {
                 document.getElementById(`category${currentCategory}-page`).style.display="none";
@@ -295,6 +293,7 @@ const backManager = () => {
             document.getElementById(`main-page1`).style.display="block";
             document.getElementById(`category${currentCategory}-page`).style.display="none";
             document.getElementById(`back-button`).style.display="none";
+            document.getElementById(`category5-page`).style.display="none";
         } else {
             document.getElementById("emergency-plan").style.display = "none";
         }
@@ -369,20 +368,12 @@ const callManager = (event) => {
         };
         clicked = event.target.id.replace(/\D/g, "");
         if (currentPage === "category1.html" && clicked === "1" || clicked === "6") {
-            document.getElementById(`info${clicked}`).style.height = "50vh";
+            document.getElementById(`info${clicked}`).style.height = "fit-content";
         } else if ( currentPage === "category2.html") {
             if (event.target.id.replace(/[0-9]/g, '') === "back-arrow-img" || event.target.id.replace(/[0-9]/g, '') === "front-arrow-img"|| event.target.id.replace(/[0-9]/g, '') === "movePages-equip" || event.target.id.replace(/[0-9]/g, '') === "equipment-img-" || event.target.id.replace(/[0-9]/g, '') === "equipment-img-div") {
                 return;
             } else {
-                if (screen.width < "450") {
-                    document.getElementById(`info${clicked}`).style.height = "20vh";
-                    console.log(event.target.id);
-                    if (clicked == "5") {
-                        document.getElementById(`info${clicked}`).style.height = "30vh";
-                    };
-                } else {
-                    document.getElementById(`info${clicked}`).style.height = "50vh";
-                }
+                document.getElementById(`info${clicked}`).style.height = "fit-content";
             };
         } else {
             document.getElementById(`info${clicked}`).style.height = "fit-content";
